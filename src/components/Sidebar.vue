@@ -16,34 +16,38 @@ const sidebarClasses = computed(() =>
         class="fixed top-0 left-0 z-60 h-full flex flex-col gap-8 w-[60vw] bg-zinc-200 items-start md:hidden p-4 shadow-lg 
         transition-all duration-300 ease-in-out origin-left transform"
     >
-        <button class="mt-1 ml-1 border p-1 rounded-full" @click="$emit('close')">
-            <i class="fa-solid fa-xmark fa-2xl"></i>
-        </button>
-        <nav class="text-lg">
-            <ul class="flex flex-col gap-4">
+        <div class="flex gap-8 items-center mt-4 m-4">
+            <button class="rounded-full" @click="$emit('close')">
+                <i class="fa-solid fa-xmark fa-2xl"></i>
+            </button>
+            <h2 class="text-2xl">MENU</h2>
+        </div>
+        <nav class="text-xl w-full">
+            <ul class="flex flex-col gap-6 w-5/6 mx-auto ">
                 <li>
-                    <a href="#"
-                        class="relative text-zinc-700 hover:text-black transition-all duration-300 after:block after:h-0.5 after:w-0 after:bg-black after:transition-all after:duration-300 after:ease-in-out hover:after:w-full">
-                        TENTANG PPI-IIUM
-                    </a>
+                    <router-link to="/" class="w-full inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
+                        HOME
+                    </router-link>
                 </li>
                 <li>
-                    <a href="#"
-                        class="relative text-zinc-700 hover:text-black transition-all duration-300 after:block after:h-0.5 after:w-0 after:bg-black after:transition-all after:duration-300 after:ease-in-out hover:after:w-full">
-                        PENA KITA
-                    </a>
+                    <router-link to="/PPI-IIUM" class="w-full inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
+                        Tentang Kami
+                    </router-link>
                 </li>
                 <li>
-                    <a href="#"
-                        class="relative text-zinc-700 hover:text-black transition-all duration-300 after:block after:h-0.5 after:w-0 after:bg-black after:transition-all after:duration-300 after:ease-in-out hover:after:w-full">
-                        INFO KULIAH
-                    </a>
+                    <router-link to="/Pena-Kita" class="w-full inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
+              Pena Kita
+            </router-link>
                 </li>
                 <li>
-                    <a href="#"
-                        class="relative text-zinc-700 hover:text-black transition-all duration-300 after:block after:h-0.5 after:w-0 after:bg-black after:transition-all after:duration-300 after:ease-in-out hover:after:w-full">
-                        KONTAK KAMI
-                    </a>
+                    <router-link to="/Info-Kuliah" class="w-full inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
+              Info Kuliah
+            </router-link>
+                </li>
+                <li>
+                    <router-link to="/Kontak" class="w-full inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
+              Kontak
+            </router-link>
                 </li>
             </ul>
         </nav>
