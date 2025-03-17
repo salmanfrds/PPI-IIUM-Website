@@ -2,4 +2,8 @@
 
 </script>
 
-<template></template>
+<template>
+    <section>
+        
+    </section>
+</template>
