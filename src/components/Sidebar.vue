@@ -13,7 +13,7 @@ const sidebarClasses = computed(() =>
 <template>
     <div
         :class="sidebarClasses"
-        class="fixed top-0 left-0 z-60 h-full flex flex-col gap-8 w-[60vw] bg-zinc-200 items-start md:hidden p-4 shadow-lg 
+        class="fixed top-0 left-0 z-60 h-full flex flex-col gap-8 w-[80vw] bg-zinc-200 items-start md:hidden p-4 shadow-lg 
         transition-all duration-300 ease-in-out origin-left transform"
     >
         <div class="flex gap-8 items-center mt-4 m-4">
