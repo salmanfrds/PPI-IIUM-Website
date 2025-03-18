@@ -25,27 +25,27 @@ const sidebarClasses = computed(() =>
         <nav class="text-xl w-full">
             <ul class="flex flex-col gap-6 w-5/6 mx-auto ">
                 <li>
-                    <router-link to="/" class="w-full inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
+                    <router-link  to="/" @click="$emit('close')" class="w-full inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
                         HOME
                     </router-link>
                 </li>
                 <li>
-                    <router-link to="/PPI-IIUM" class="w-full inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
+                    <router-link to="/PPI-IIUM" @click="$emit('close')" class="w-full inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
                         Tentang Kami
                     </router-link>
                 </li>
                 <li>
-                    <router-link to="/Pena-Kita" class="w-full inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
+                    <router-link to="/Pena-Kita" @click="$emit('close')" class="w-full inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
               Pena Kita
             </router-link>
                 </li>
                 <li>
-                    <router-link to="/Info-Kuliah" class="w-full inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
+                    <router-link to="/Info-Kuliah" @click="$emit('close')" class="w-full inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
               Info Kuliah
             </router-link>
                 </li>
                 <li>
-                    <router-link to="/Kontak" class="w-full inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
+                    <router-link to="/Kontak" @click="$emit('close')" class="w-full inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
               Kontak
             </router-link>
                 </li>
