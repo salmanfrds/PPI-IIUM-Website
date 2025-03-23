@@ -1,35 +1,41 @@
 <script>
+import university from "@/assets/university.png";
 
+export default {
+  data() {
+    return {
+      faculties: [
+        { name: "Kulliyyah of Education", link: "https://www.youtube.com/@OfficialIIUM", image: university },
+        { name: "Kulliyyah of Architecture and Environmental Design", link: "https://www.youtube.com/@OfficialIIUM", image: university },
+        { name: "Ahmad Ibrahim Kulliyyah of Laws", link: "https://www.youtube.com/@OfficialIIUM", image: university },
+        { name: "Kulliyyah of Islamic Reveal Knowledge and Human Sciences", link: "https://www.youtube.com/@OfficialIIUM", image: university },
+        { name: "Kulliyyah of Engineering", link: "https://www.youtube.com/@OfficialIIUM", image: university },
+        { name: "Kulliyyah of Economics and Management Sciences", link: "https://www.youtube.com/@OfficialIIUM", image: university },
+        { name: "Kulliyyah of Information and Communication Technology", link: "https://www.youtube.com/@OfficialIIUM", image: university },
+        { name: "Centre for Languages and Pre-University Academic Development", link: "https://www.youtube.com/@OfficialIIUM", image: university }
+      ]
+    };
+  }
+};
 </script>
 
 <template>
-    <section class="flex justify-center items-center min-h-screen bg-gray-100">
-        <!-- Button Grid Container -->
-        <div class="grid grid-cols-4 gap-6">
-            <button class="w-40 h-52 bg-black text-white text-xl font-bold rounded-xl shadow-lg flex justify-center items-center hover:scale-105 transition">
-                KULIYAH
-            </button>
-            <button class="w-40 h-52 bg-black text-white text-xl font-bold rounded-xl shadow-lg flex justify-center items-center hover:scale-105 transition">
-                KULIYAH
-            </button>
-            <button class="w-40 h-52 bg-black text-white text-xl font-bold rounded-xl shadow-lg flex justify-center items-center hover:scale-105 transition">
-                KULIYAH
-            </button>
-            <button class="w-40 h-52 bg-black text-white text-xl font-bold rounded-xl shadow-lg flex justify-center items-center hover:scale-105 transition">
-                KULIYAH
-            </button>
-            <button class="w-40 h-52 bg-black text-white text-xl font-bold rounded-xl shadow-lg flex justify-center items-center hover:scale-105 transition">
-                KULIYAH
-            </button>
-            <button class="w-40 h-52 bg-black text-white text-xl font-bold rounded-xl shadow-lg flex justify-center items-center hover:scale-105 transition">
-                KULIYAH
-            </button>
-            <button class="w-40 h-52 bg-black text-white text-xl font-bold rounded-xl shadow-lg flex justify-center items-center hover:scale-105 transition">
-                KULIYAH
-            </button>
-            <button class="w-40 h-52 bg-black text-white text-xl font-bold rounded-xl shadow-lg flex justify-center items-center hover:scale-105 transition">
-                KULIYAH
-            </button>
+  <section class="flex justify-center items-center min-h-screen bg-gray-100 py-8 mt-16">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div v-for="faculty in faculties" :key="faculty.name" class="bg-white rounded-md shadow-md overflow-hidden p-4 flex flex-col items-center w-[20vw]">
+        <!-- Faculty Image -->
+        <div class="w-full aspect-[4/3] bg-cover bg-center rounded-lg"
+             :style="{ backgroundImage: `url(${faculty.image})` }">
         </div>
-    </section>
+        <div class="w-full flex flex-col justify-between h-full">
+            <h3 class="text-base font-semibold text-gray-800">{{ faculty.name }}</h3>
+            <!-- "See More" Button -->
+            <a :href="faculty.link" 
+               class="text-sm text-gray-600 px-4 py-2 transition mx-auto mt-4 border-t border-gray-900">
+              See More
+            </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
