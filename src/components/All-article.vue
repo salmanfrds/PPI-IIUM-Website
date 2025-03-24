@@ -18,6 +18,7 @@
             <img :src="`http://localhost:3000${article.imagePath}`" class="aspect-[4/3] object-cover rounded-sm px-2" alt="image">
             <p class="px-4 py-2">{{ article.synopsis }}</p>
         </div>
+        <!-- fixed now -->
     </section>
 </template>
 
