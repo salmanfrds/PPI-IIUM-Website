@@ -15,12 +15,12 @@ export default {
       <nav class="hidden md:block col-span-2 m-auto ">
         <ul class="flex text-xl gap-8">
           <li>
-            <router-link to="/PPI-IIUM" class="inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
+            <router-link to="/ppi-iium" class="inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
               PPI-IIUM
             </router-link>
           </li>
           <li>
-            <router-link to="/Pena-Kita" class="inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
+            <router-link to="/pena-kita" class="inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
               Pena Kita
             </router-link>
           </li>
@@ -35,12 +35,12 @@ export default {
       <nav class="hidden md:block col-span-2 m-auto ">
         <ul class="flex text-xl gap-8">
           <li>
-            <router-link to="/Info-Kuliah" class="inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
+            <router-link to="/info-kuliah" class="inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
               Info Kuliah
             </router-link>
           </li>
           <li>
-            <router-link to="/Kontak" class="inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
+            <router-link to="/kontak" class="inline-block text-zinc-700 hover:text-black bg-white px-4 py-2 rounded-lg shadow-md hover:scale-107 transition-all duration-300 hover:rounded-xl hover:shadow-lg">
               Kontak
             </router-link>
           </li>

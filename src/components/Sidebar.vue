@@ -5,8 +5,8 @@ const props = defineProps({ isOpen: Boolean });
 
 const sidebarClasses = computed(() => 
   props.isOpen 
-    ? "opacity-100 pointer-events-auto scale-x-100" 
-    : "opacity-0 pointer-events-none scale-x-10"
+    ? "opacity-100 scale-x-100" 
+    : "opacity-0 scale-x-1"
 );
 </script>
 

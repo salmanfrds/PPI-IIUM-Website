@@ -22,11 +22,11 @@
 
 <template>
   <section class="bg-gray-200 min-h-[50vh] py-6 px-4 flex flex-col gap-4 justify-center items-center">
-    <h2 class="text-center text-gray-800 text-3xl font-bold">PENGURUS PPI-IIUM 2024/2025</h2>
+    <h2 class="text-gray-800 text-xl md:text-3xl font-bold">PENGURUS PPI-IIUM 2024/2025</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       <a v-for="item in pengurus" :key="item.name" :href="item.link">
-        <div class="aspect-square w-[40vw] md:w-[20vw] bg-gray-900 text-white flex items-center justify-center rounded-xl md:rounded-2xl shadow-md hover:shadow-2xl transform transition duration-300 hover:scale-103">
-          <img :src="item.image" class="w-11/12 rounded-md md:rounded-lg" :alt="item.name" />
+        <div class="aspect-square w-[40vw] md:w-[20vw] bg-gray-900 text-white flex items-center justify-center rounded-lg md:rounded-xl shadow-md hover:shadow-2xl transform transition duration-300 hover:scale-103">
+          <img :src="item.image" class="w-11/12 rounded-sm md:rounded-md" :alt="item.name" />
         </div>
       </a>
     </div>
