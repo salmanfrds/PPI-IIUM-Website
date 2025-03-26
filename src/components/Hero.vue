@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-    <section class="min-h-[50vh] flex justify-center items-center text-zinc-800">
+    <section class="min-h-[50vh] flex flex-col justify-center items-center text-zinc-800">
         <div class="grid grid-row-2 lg:grid-cols-2 p-8 md:px-24 mt-16 gap-4">
             <div class="col-span-1 row-span-1 flex flex-col gap-5 my-auto">
                 <div class="text-2xl md:text-4xl col-span-2 text-zinc-600 text-center lg:text-left"> 

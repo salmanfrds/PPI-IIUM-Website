@@ -1,12 +1,17 @@
 // router/routes.js
-import App from '@/components/Hero.vue';
-import PpiIium from '@/components/PPI-IIUM.vue';
-import PenaKita from '@/components/Pena-Kita.vue';
-import InfoKuliah from '@/components/Info-Kuliah.vue';
-import Kontak from '@/components/Kontak.vue';
+import App from '@/views/HomeLanding.vue';
+import PpiIium from '@/views/PPI-IIUM.vue';
+import PenaKita from '@/views/Pena-Kita.vue';
+import InfoKuliah from '@/views/Info-Kuliah.vue';
+import Kontak from '@/views/Kontak.vue';
 import All from '@/components/All-Article.vue'
 import Login from '@/components/Login.vue';
 import Submit from '@/components/Submit.vue';
+import Dashboard from '@/components/Dashboard.vue';
+import Article from '@/components/Article.vue';
+import PenaKastrat from '@/components/Pena-Kastrat.vue';
+import Seboga from '@/components/Seboga.vue';
+import RuangCerita from '@/components/Ruang-Cerita.vue';
 
 const routes = [
   {
@@ -30,6 +35,21 @@ const routes = [
         name: 'PenaKitaAll',
         component: All,
       },
+      {
+        path: 'pena-kastrat', // This creates /pena-kita/all
+        name: 'PenaKastrat',
+        component: PenaKastrat,
+      },
+      {
+        path: 'seboga', // This creates /pena-kita/all
+        name: 'Seboga',
+        component: Seboga,
+      },
+      {
+        path: 'ruang-cerita', // This creates /pena-kita/all
+        name: 'RuangCerita',
+        component: RuangCerita,
+      },
     ],
   },
   {
@@ -51,25 +71,54 @@ const routes = [
     path: '/submit',
     name: 'Submit',
     component: Submit,
-    beforeEnter: (to, from, next) => {
-      // Log cookies to see if they are present
-      console.log("Cookies:", document.cookie);
-    
-      // Get the JWT from cookies
-      const jwtCookie = document.cookie
-        .split('; ')
-        .find(row => row.startsWith('auth='))
-        ?.split('=')[1]; // Extract the JWT
-    
-      if (jwtCookie) {
-        // If the cookie is found, proceed to the protected route
-        next();
-      } else {
-        // If there's no JWT cookie, redirect to login or another route
-        console.log('no cookie dumbass');
-        next('/login');
+    beforeEnter: async (to, from, next) => {
+      try {
+        const response = await fetch("http://localhost:3000/auth/validate", {
+          method: "GET",
+          credentials: "include", // ✅ Important for sending cookies
+        });
+      
+        if (response.ok) {
+          next(); // ✅ Allow access
+          console.log("success login");
+        } else {
+          console.log("User not authenticated, redirecting...");
+          next("/dashboard"); // ❌ Redirect if not authenticated
+        }
+      } catch (error) {
+        console.error("Error checking auth:", error);
+        next("/dashboard");
       }
-    }
+    }    
+  },
+  {
+    path: "/dashboard",
+    name: 'Dashboard',
+    component: Dashboard,
+    beforeEnter: async (to, from, next) => {
+      try {
+        const response = await fetch("http://localhost:3000/auth/validate", {
+          method: "GET",
+          credentials: "include",
+        });
+
+        if (response.ok) {
+          next(); // ✅ Proceed to the dashboard
+        } else {
+          console.log("User not authenticated, redirecting...");
+          next("/login"); // ❌ Redirect if not authenticated
+        }
+      } catch (error) {
+        console.error("Error checking auth:", error);
+        next("/login");
+      }
+    },
+  },
+  {
+    path: "/article/:id",
+    name: 'Article',
+    component: Article,
+    props: true,
   },
 ];
 

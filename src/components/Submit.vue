@@ -5,28 +5,21 @@
         Post
       </h1>
       <form @submit.prevent="handleSubmit" class="space-y-6" enctype="multipart/form-data">
-        <div class="grid grid-row-2 md:grid-cols-3 gap-2 md:gap-4">
-          <div class="col-span-1 md:col-span-2">
-            <label for="title" class="block text-sm font-medium text-gray-800 mb-2">Article Title</label>
-            <input v-model="formData.title" type="text" id="title" placeholder="Enter The Article Title" required
-              class="w-full px-4 py-2 border-2 border-gray-400 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-500 transition" />
-          </div>
-          <div class="col-span-1">
-            <label for="author" class="block text-sm font-medium text-gray-800 mb-2">Author</label>
-            <input v-model="formData.author" type="text" id="author" required
-              class="w-full px-4 py-2 border-2 border-gray-400 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-500 transition" />
-          </div>
+        <div class="col-span-1 md:col-span-2">
+          <label for="title" class="block text-sm font-medium text-gray-800 mb-2">Article Title</label>
+          <input v-model="formData.title" type="text" id="title" placeholder="Enter The Article Title" required
+            class="w-full px-4 py-2 border-2 border-gray-400 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-500 transition" />
         </div>
-        <div class="grid grid-row-2 md:grid-cols-3 gap-2 md:gap-4">
+        <div class="grid grid-row-2 md:grid-cols-3 gap-2 md:gap-4"> 
           <div class="col-span-1 md:col-span-2">
             <label for="category" class="block text-sm font-medium text-gray-800 mb-2">Categories</label>
             <select v-model="formData.category" id="category" required
               class="w-full px-4 py-2 border-2 border-gray-400 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-500 transition">
               <option value="" disabled selected>Select Category</option>
-              <option value="full-time">Pena Kastrat</option>
-              <option value="part-time">Seboga</option>
-              <option value="part-time">Cerita Kita</option>
-              <option value="part-time">Lain-Lain</option>
+              <option value="Pena Kastrat">Pena Kastrat</option>
+              <option value="Seboga">Seboga</option>
+              <option value="Ruang Cerita">Ruang Cerita</option>
+              <option value="Lain Lain">Lain-Lain</option>
             </select>
           </div>
           <div class="image-upload-container">
@@ -37,23 +30,6 @@
               <input ref="fileUpload" type="file" id="imageUploader" @change="handleImageUpload" accept="image/*"
                 class="w-full px-4 py-2 border-2 border-gray-400 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-500 transition" />
             </div>
-
-            <!-- Cropper Modal -->
-            <div v-if="showCropper" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-              <div class="bg-white p-6 rounded-lg max-w-xl w-full">
-                <div class="mb-4">
-                  <VueCropper ref="cropper" :src="imageSrc" :options="cropperOptions" @ready="cropperReady" />
-                </div>
-                <div class="flex justify-between">
-                  <button @click="cancelCrop" class="px-4 py-2 bg-red-500 text-white rounded">
-                    Cancel
-                  </button>
-                  <button @click="cropImage" class="px-4 py-2 bg-green-500 text-white rounded">
-                    Crop & Upload
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         <div>
@@ -63,7 +39,7 @@
         </div>
         <div>
           <label class="block text-sm font-medium text-blue-gray mb-2">Details</label>
-          <div ref="editor" class="min-h-[60vh] text-blue-gray"></div>
+          <div ref="editor" class="min-h-[80vh] text-blue-gray"></div>
         </div>
         <div class="text-center">
           <button type="submit"
@@ -88,7 +64,6 @@ export default defineComponent({
     return {
       formData: {
         title: "",
-        author: "",
         category: "",
         synopsis: "",
       },
@@ -99,13 +74,14 @@ export default defineComponent({
     // Initialize Quill editor
     this.editor = new Quill(this.$refs.editor, {
       theme: "snow",
+      placeholder: 'click disini untuk menulis...',
       modules: {
         toolbar: [
           [{ font: [] }, { size: [] }],
           ["bold", "underline", "strike"],
           [{ color: [] }, { background: [] }],
           ["link", "blockquote", "code-block"],
-          [{ list: "ordered" }, { list: "bullet" }],
+          [{ list: "ordered" }],
           [{ align: [] }],
           [{ header: [1, 2, 3, 4, 5, 6, false] }],
           ["clean"],
@@ -121,20 +97,18 @@ export default defineComponent({
     async handleSubmit() {
       const form = new FormData();
       const details = this.editor.getContents();
-      const today = new Date().toISOString().split("T")[0];
 
       form.append("title", this.formData.title);
-      form.append("author", this.formData.author);
       form.append("category", this.formData.category);
       form.append("synopsis", this.formData.synopsis);
       form.append("avatar", this.$refs.fileUpload.files[0]);
       form.append("details", JSON.stringify(details));
-      form.append("uploadDate", today);
 
       try {
         const response = await fetch("http://localhost:3000/api/articles", {
           method: "POST",
           body: form,
+          credentials: "include",
         });
 
         if (!response.ok) throw new Error("Failed to submit article");
@@ -167,12 +141,3 @@ export default defineComponent({
   },
 });
 </script>
-
-
-<style scoped>
-body {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-</style>

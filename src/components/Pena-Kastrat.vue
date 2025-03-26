@@ -38,7 +38,7 @@
       },
       methods: {
         fetchArticles() {
-          fetch("http://localhost:3000/api/articles") // Use your backend endpoint
+          fetch("http://localhost:3000/api/articles/pena-kastrat") // Use your backend endpoint
             .then((response) => response.json())
             .then((articles) => {
               this.articles = articles.reverse(); // Save articles in the component's state

@@ -1,7 +1,7 @@
 <script setup>
-import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
-import Sidebar from './components/Sidebar.vue';
+import Header from './layout/Header.vue';
+import Footer from './layout/Footer.vue';
+import Sidebar from './layout/Sidebar.vue';
 import { ref } from 'vue';
 
 // Define state
@@ -44,7 +44,7 @@ const toggleSidebar = () => {
 
   * {
     font-family: "Judson", serif;
-    font-weight: 600;
+    font-weight: 400;
     font-style: normal;
   }
 

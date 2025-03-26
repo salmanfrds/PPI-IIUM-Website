@@ -74,10 +74,7 @@ export default {
           if (data.success === true) {
             console.log("Authentication successful, ini token nya:", data.token);
 
-            // localStorage.setItem('jwt',data.token);
-            sessionStorage.setItem('jwt', data.token);
-
-            this.router.push('/submit'); // Redirect to /submit if successful
+            this.router.push('/dashboard'); // Redirect to /submit if successful
           } else {
             console.log("Authentication failed:", data);
           }
