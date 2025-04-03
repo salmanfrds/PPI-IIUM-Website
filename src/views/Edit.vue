@@ -1,6 +1,6 @@
 <template>
   <div class="bg-gray-300 min-h-screen flex flex-col items-center justify-center mt-16 py-8">
-    <div id="adminPage" class="w-[80vw] bg-white shadow-2xl rounded-xl p-8 border border-gray-400">
+    <div id="adminPage" class="w-[90vw] bg-white shadow-2xl rounded-xl p-4 border border-gray-400">
       <h1 class="text-3xl font-bold text-center text-gray-800 mb-8 uppercase tracking-wider">
         Post
       </h1>
@@ -10,7 +10,7 @@
           <input v-model="formData.title" type="text" id="title" placeholder="Enter The Article Title" required
             class="w-full px-4 py-2 border-2 border-gray-400 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-500 transition" />
         </div>
-        <div class="grid grid-row-2 md:grid-cols-3 gap-2 md:gap-4"> 
+        <div class="grid grid-row-2 md:grid-cols-3 gap-2 md:gap-4">
           <div class="col-span-1 md:col-span-2">
             <label for="category" class="block text-sm font-medium text-gray-800 mb-2">Categories</label>
             <select v-model="formData.category" id="category" required
@@ -44,7 +44,7 @@
         <div class="text-center">
           <button type="submit"
             class="bg-gray-600 text-white px-8 py-3 rounded-full hover:bg-gray-700 focus:ring-2 focus:ring-gray-500 transition-transform transform hover:scale-105">
-            Submit Article
+            Edit Article
           </button>
         </div>
       </form>
@@ -62,19 +62,19 @@ export default defineComponent({
   name: "ArticleForm",
   data() {
     return {
+      articleId: this.$route.params.id,
       formData: {
         title: "",
         category: "",
         synopsis: "",
+        editor: null,
       },
-      editor: null,
     };
   },
   mounted() {
-    // Initialize Quill editor
     this.editor = new Quill(this.$refs.editor, {
       theme: "snow",
-      placeholder: 'click disini untuk menulis...',
+      placeholder: 'Click here to write...',
       modules: {
         toolbar: [
           [{ font: [] }, { size: [] }],
@@ -88,6 +88,11 @@ export default defineComponent({
         ],
       },
     });
+    console.log("Quill editor initialized!");
+    if (this.articleId) {
+      console.log("Fetching article with ID:", this.articleId);
+      this.fetchArticleData(this.articleId);
+    }
   },
   methods: {
     handleImageUpload(event) {
@@ -104,22 +109,23 @@ export default defineComponent({
       form.append("avatar", this.$refs.fileUpload.files[0]);
       form.append("details", JSON.stringify(details));
 
+      // console.log("after:" + details)
       try {
-        const response = await fetch("http://localhost:3000/api/articles", {
+        const response = await fetch(`http://localhost:3000/api/edit/${this.articleId}`, {
           method: "POST",
           body: form,
           credentials: "include",
         });
 
-        if (!response.ok) throw new Error("Failed to submit article");
+        if (!response.ok) throw new Error("Failed to edit article");
 
         const data = await response.json();
         this.showNotification(
           "success",
-          "Article Posted!",
-          "Your article has been successfully submitted."
+          "Article Edited!",
+          "Your article has been successfully edited."
         );
-        console.log("Article added:", data);
+        console.log("Article updated:", data);
         setTimeout(() => location.reload(), 2000);
       } catch (error) {
         console.error("Error:", error);
@@ -137,6 +143,30 @@ export default defineComponent({
         text,
         confirmButtonColor: icon === "success" ? "#3b82f6" : "#ef4444",
       });
+    },
+    async fetchArticleData(id) {
+      try {
+        const response = await fetch(`http://localhost:3000/api/edit/${id}`, {
+          method: "GET",
+          credentials: "include",
+        });
+
+        if (!response.ok) throw new Error("Failed to fetch article");
+
+        const data = await response.json();
+
+        this.formData.title = data.title;
+        this.formData.category = data.category;
+        this.formData.synopsis = data.synopsis;
+        const quillContent = JSON.parse(data.details);
+
+        console.log("Parsed quillContent:", quillContent);
+        
+        this.editor.setContents(quillContent);
+      } catch (error) {
+        console.error("Error fetching article:", error);
+        this.showNotification("error", "Failed to Load", "Could not fetch article details.");
+      }
     },
   },
 });

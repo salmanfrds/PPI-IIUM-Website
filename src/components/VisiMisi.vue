@@ -3,10 +3,10 @@
       <div class="container mx-auto px-4">
         <!-- Header Section -->
         <div class="text-center mb-12">
-          <h1 class="text-4xl font-bold text-gray-800 mb-2 uppercase tracking-wide">
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2 uppercase tracking-wide">
             VISI MISI
           </h1>
-          <h4 class="text-2xl text-gray-600 font-semibold">
+          <h4 class="text-xl md:text-2xl text-gray-600 font-semibold">
             PPI IIUM
           </h4>
         </div>
@@ -15,20 +15,20 @@
         <div class="grid md:grid-cols-2 gap-8 px-4 md:px-12">
           <!-- Visi Card -->
           <div class="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow duration-300">
-            <h4 class="text-2xl font-bold mb-6 border-b-2 pb-3">
+            <h4 class="text-xl md:text-2xl font-bold mb-6 border-b-2 pb-3">
               VISI
             </h4>
-            <p class="text-gray-700 leading-relaxed">
+            <p class= "text-sm md:text-base text-gray-700 leading-relaxed">
               {{ visiContent || 'Visi belum ditentukan.' }}
             </p>
           </div>
   
           <!-- Misi Card -->
           <div class="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow duration-300">
-            <h4 class="text-2xl font-bold mb-6 border-b-2 pb-3">
+            <h4 class="text-xl md:text-2xl font-bold mb-6 border-b-2 pb-3">
               MISI
             </h4>
-            <p class="text-gray-700 leading-relaxed">
+            <p class="text-sm md:text-base text-gray-700 leading-relaxed">
               {{ misiContent || 'Misi belum ditentukan.' }}
             </p>
           </div>

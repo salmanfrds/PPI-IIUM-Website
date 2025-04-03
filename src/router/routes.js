@@ -5,14 +5,15 @@ import PenaKita from '@/views/Pena-Kita.vue';
 import InfoKuliah from '@/views/Info-Kuliah.vue';
 import Kontak from '@/views/Kontak.vue';
 import All from '@/components/All-Article.vue'
-import Login from '@/components/Login.vue';
-import Submit from '@/components/Submit.vue';
-import Dashboard from '@/components/Dashboard.vue';
-import Article from '@/components/Article.vue';
+import Login from '@/views/Login.vue';
+import Submit from '@/views/Submit.vue';
+import Dashboard from '@/views/Dashboard.vue';
+import Article from '@/views/Article.vue';
 import PenaKastrat from '@/components/Pena-Kastrat.vue';
 import Seboga from '@/components/Seboga.vue';
 import RuangCerita from '@/components/Ruang-Cerita.vue';
-import Edit from '@/components/Edit.vue';
+import Edit from '@/views/Edit.vue';
+import Ruanggaung from '@/components/Ruanggaung.vue';
 
 const routes = [
   {
@@ -50,6 +51,11 @@ const routes = [
         path: 'ruang-cerita', // This creates /pena-kita/all
         name: 'RuangCerita',
         component: RuangCerita,
+      },
+      {
+        path: 'ruanggaung', // This creates /pena-kita/all
+        name: 'RuangGaung',
+        component: Ruanggaung,
       },
     ],
   },

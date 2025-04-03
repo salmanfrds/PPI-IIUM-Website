@@ -1,7 +1,7 @@
 <template>
     <section class="py-16 min-h-[50vh] flex flex-col gap-8 bg-gray-100">
-        <h2 class="text-center font-bold text-3xl text-gray-800">TERBARU DARI KAMI</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 px-8 gap-8">
+        <h2 class="text-center font-bold text-2xl md:text-3xl text-gray-800">TERBARU DARI KAMI</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 px-8 gap-8">
             <div v-for="(article, index) in articles" :key="index"
                 class="bg-gray-200 text-gray-800 rounded-md shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col gap-4">
                 <router-link :to="`/article/${article._id}`">
