@@ -20,7 +20,8 @@ export default {
 </script>
 
 <template>
-  <section class="flex justify-center items-center min-h-screen bg-gray-100 py-8 mt-16">
+  <section class="flex flex-col justify-center items-center min-h-screen bg-gray-100 py-8 mt-16">
+    <h2 class="text-gray-800 text-4xl md:text-3xl font-bold text-center mb-12">INFO KULIAH<br> <span class="text-2xl text-gray-600">PANDUAN, MATERI, & TIPS MAHASISWA</span> </h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       <div v-for="faculty in faculties" :key="faculty.name" class="bg-white rounded-md shadow-md overflow-hidden flex flex-col items-center w-[40vw] md:w-[20vw]">
         <!-- Faculty Image -->
@@ -31,7 +32,9 @@ export default {
             <h3 class="text-base text-center font-semibold text-gray-800 md:p-2">{{ faculty.name }}</h3>
             <!-- "See More" Button -->
             <a :href="faculty.link" 
-               class="text-sm text-gray-600 px-4 py-2 transition mx-auto mt-4 border-t border-gray-900">
+               class="text-sm text-gray-600 px-4 py-2 transition mx-auto mt-4 border-t border-gray-900"
+               target="_blank"
+            >
               See More
             </a>
         </div>

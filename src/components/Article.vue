@@ -85,29 +85,3 @@ export default {
     },
 };
 </script>
-
-<style>
-  /* Remove the border from the Quill container */
-    .ql-container {
-      border: none !important;
-      /* background-color: #cccc !important; */
-      color: #6a7282 ;
-    }
-
-  /* Optional: Remove the border from the Quill editor itself */
-    /* Adjust the Quill editor text size */
-    .ql-editor {
-      font-size: 16px !important; /* Increase font size */
-      line-height: 1.8 !important; /* Improve readability */
-    }   
-    /* Optional: Increase heading sizes */
-    .ql-editor h1 {
-      font-size: 28px !important;
-    }   
-    .ql-editor h2 {
-      font-size: 24px !important;
-    }   
-    .ql-editor h3 {
-      font-size: 18px !important;
-    }
-</style>

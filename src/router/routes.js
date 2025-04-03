@@ -12,6 +12,7 @@ import Article from '@/components/Article.vue';
 import PenaKastrat from '@/components/Pena-Kastrat.vue';
 import Seboga from '@/components/Seboga.vue';
 import RuangCerita from '@/components/Ruang-Cerita.vue';
+import Edit from '@/components/Edit.vue';
 
 const routes = [
   {
@@ -118,6 +119,12 @@ const routes = [
     path: "/article/:id",
     name: 'Article',
     component: Article,
+    props: true,
+  },
+  {
+    path: "/edit/:id",
+    name: 'Edit',
+    component: Edit,
     props: true,
   },
 ];

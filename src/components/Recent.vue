@@ -1,6 +1,6 @@
 <template>
     <section class="py-16 min-h-[50vh] flex flex-col gap-8 bg-gray-100">
-        <h2 class="text-center text-3xl">Terbaru Dari Kami</h2>
+        <h2 class="text-center font-bold text-3xl text-gray-800">TERBARU DARI KAMI</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 px-8 gap-8">
             <div v-for="(article, index) in articles" :key="index"
                 class="bg-gray-200 text-gray-800 rounded-md shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col gap-4">
@@ -18,7 +18,7 @@
                     <p class="text-gray-500">{{ new Date(article.createdAt).toLocaleDateString() }}</p>
                 </div>
                 <img :src="`http://localhost:3000${article.imagePath}`" class="aspect-[4/3] object-cover rounded-sm px-2" alt="image">
-                <p class="px-4 py-2">{{ article.synopsis }}</p>
+                <p class="px-4 py-2 text-justify">{{ article.synopsis }}</p>
             </div>
         </div>
     </section>
