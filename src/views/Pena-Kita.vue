@@ -19,7 +19,7 @@ const changeFilter = (filter) => {
           v-for="filter in ['all', 'pena-kastrat', 'seboga', 'ruang-cerita', 'ruanggaung']"
           :key="filter"
           @click="changeFilter(filter)"
-          class="px-2 py-1 md:px-4 md:py-2 rounded-full border border-gray-500 text-gray-800 hover:bg-gray-500 hover:text-white transition-all duration-300"
+          class="px-2 py-1 md:px-4 md:py-2 text-sm md:text-base rounded-full border border-gray-500 text-gray-800 hover:bg-gray-500 hover:text-white transition-all duration-300"
         >
           {{ filter.replace('-', ' ').toUpperCase() }}
         </button>
