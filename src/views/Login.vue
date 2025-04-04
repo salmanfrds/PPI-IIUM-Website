@@ -1,5 +1,5 @@
 <template>
-  <div id="loginPage" class="min-h-[80vh] w-full flex items-center justify-center mt-16 py-8">
+  <div id="loginPage" class="min-h-[80vh] w-full flex items-center justify-center mt-12 py-8">
     <div class="w-full max-w-md">
       <div class="bg-white shadow-2xl rounded-xl overflow-hidden">
         <div class="p-8">

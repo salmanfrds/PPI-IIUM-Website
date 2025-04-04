@@ -1,21 +1,24 @@
 <template>
-    <section class="py-8 mt-16 container mx-auto">
+    <section class="py-8 mt-7 container mx-auto">
         <div v-if="loading" class="text-center">Loading...</div>
         <div v-else-if="errorMessage" class="text-danger text-center">
             {{ errorMessage }}
         </div>
         <div v-else class="flex flex-col gap-4 md:gap-6 items-center">
-            <img v-if="article.imagePath" :src="`http://165.22.60.186:3000${article.imagePath}`" alt="Article Image"
-                class="my-4 rounded-lg w-3/4 object-cover border" />
-
-            <h1 class="text-2xl md:text-4xl font-bold">{{ article.title }}</h1>
-            <p class="text-gray-600">By {{ article.author }} | {{ formattedDate }}</p>
+            <img v-if="article.imagePath" :src="`http://server.salmanfrds.com${article.imagePath}`" alt="Article Image"
+                class="mt-4 rounded-md w-[98%] md:w-[90%] object-cover border" 
+            />
+            <h1 class="text-xl text-center md:text-3xl xl:text-4xl font-bold">{{ article.title }}</h1>
+            <div class="flex justify-between gap-8">
+                <p class="text-gray-600">By {{ article.author }} | {{ formattedDate }}</p>
+                <p class="text-gray-600">{{ article.category }}</p>
+            </div>
             <p class="text-gray-500 px-6 md:px-0 md:w-3/4 text-justify text-lg">
                 <strong>Synopsis:</strong> {{ article.synopsis }}
             </p>
 
             <!-- If you want to display Quill content later, you'll need a proper parser -->
-            <div class="text-sm text-justify text-gray-800 font-normal leading-relaxed px-4 md:px-24 w-full ">
+            <div class="text-sm text-justify text-gray-800 font-normal leading-relaxed px-4 md:px-12 xl:px-24 w-full ">
                 <div ref="quillContainer"></div>
             </div>
         </div>

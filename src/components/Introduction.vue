@@ -1,8 +1,8 @@
 <script setup></script>
 
 <template>
-    <section class="bg-white rounded-lg shadow-lg min-h-[25vh] flex flex-col gap-4 mt-16 py-8">
-        <div class="bg-gray-200 rounded-lg w-4/5 md:w-3/4 aspect-[3/1] mx-auto">
+    <section class="bg-white rounded-lg shadow-lg min-h-[25vh] flex flex-col gap-4 mt-12 py-8">
+        <div class="bg-gray-200 rounded-lg w-4/5 md:w-3/4 aspect-[2/1] mx-auto">
             Banner
         </div>
         <div class="text-gray-800 text-2xl md:text-3xl font-bold w-4/5 md:w-3/4 mx-auto">Tentang PPI-IIUM</div>

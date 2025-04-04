@@ -13,7 +13,7 @@ const changeFilter = (filter) => {
 </script>
 
 <template>
-  <section class="mt-16 py-8 min-h-[50vh] flex flex-col gap-4 w-full">
+  <section class="mt-12 py-8 min-h-[50vh] flex flex-col gap-4 w-full">
       <div class="grid grid-cols-3 md:grid-cols-5 gap-2 mx-auto px-4">
         <button
           v-for="filter in ['all', 'pena-kastrat', 'seboga', 'ruang-cerita', 'ruanggaung']"

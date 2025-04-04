@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-    <section class="bg-gray-100 flex flex-col items-center justify-center min-h-[50vh] mt-16 py-8 gap-10">
+    <section class="bg-gray-100 flex flex-col items-center justify-center min-h-[50vh] mt-12 py-8 gap-10">
         <h2 class="text-center text-3xl font-bold">OUR SOCIAL MEDIA</h2>
         <div class="flex justify-center gap-2 md:gap-8">
             <!-- Instagram -->

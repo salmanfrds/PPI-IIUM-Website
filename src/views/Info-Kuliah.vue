@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <section class="flex flex-col justify-center items-center min-h-[50vh] bg-gray-100 py-8 mt-16">
+  <section class="flex flex-col justify-center items-center min-h-[50vh] bg-gray-100 py-8 mt-12">
     <h2 class="text-gray-800 text-2xl md:text-3xl font-bold text-center mb-12">INFO KULIAH<br> <span class="text-xl md:text-2xl text-gray-600">PANDUAN, MATERI, & TIPS MAHASISWA</span> </h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       <div v-for="faculty in faculties" :key="faculty.name" class="bg-white rounded-md shadow-md overflow-hidden flex flex-col items-center w-[40vw] md:w-[20vw]">
