@@ -105,7 +105,7 @@ export default defineComponent({
       form.append("details", JSON.stringify(details));
 
       try {
-        const response = await fetch("http://localhost:3000/api/articles", {
+        const response = await fetch("https://server.salmanfrds.com/api/articles", {
           method: "POST",
           body: form,
           credentials: "include",

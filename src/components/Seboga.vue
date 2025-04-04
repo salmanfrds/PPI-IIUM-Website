@@ -19,7 +19,7 @@
               </div>
               <p class="text-gray-500">{{ new Date(article.createdAt).toLocaleDateString() }}</p>
           </div>
-          <img :src="`http://localhost:3000${article.imagePath}`" class="aspect-[4/3] object-cover rounded-sm px-2" alt="image">
+          <img :src="`https://server.salmanfrds.com${article.imagePath}`" class="aspect-[4/3] object-cover rounded-sm px-2" alt="image">
           <p class="px-4 py-2 text-justify">{{ article.synopsis }}</p>
         </div>
         <!-- fixed now -->
@@ -41,7 +41,7 @@
       },
       methods: {
         fetchArticles() {
-          fetch("http://localhost:3000/api/articles/seboga") // Use your backend endpoint
+          fetch("https://server.salmanfrds.com/api/articles/seboga") // Use your backend endpoint
             .then((response) => response.json())
             .then((articles) => {
               this.articles = articles.reverse(); // Save articles in the component's state

@@ -5,7 +5,7 @@
             {{ errorMessage }}
         </div>
         <div v-else class="flex flex-col gap-4 md:gap-6 items-center">
-            <img v-if="article.imagePath" :src="`http://localhost:3000${article.imagePath}`" alt="Article Image"
+            <img v-if="article.imagePath" :src="`http://165.22.60.186:3000${article.imagePath}`" alt="Article Image"
                 class="my-4 rounded-lg w-3/4 object-cover border" />
 
             <h1 class="text-2xl md:text-4xl font-bold">{{ article.title }}</h1>
@@ -39,7 +39,7 @@ export default {
         onMounted(async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:3000/api/article/${route.params.id}`
+                    `https://server.salmanfrds.com/api/article/${route.params.id}`
                 );
                 if (!response.ok) throw new Error("Failed to fetch article");
 

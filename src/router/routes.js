@@ -80,7 +80,7 @@ const routes = [
     component: Submit,
     beforeEnter: async (to, from, next) => {
       try {
-        const response = await fetch("http://localhost:3000/auth/validate", {
+        const response = await fetch("https://server.salmanfrds.com/auth/validate", {
           method: "GET",
           credentials: "include", // ✅ Important for sending cookies
         });
@@ -104,7 +104,7 @@ const routes = [
     component: Dashboard,
     beforeEnter: async (to, from, next) => {
       try {
-        const response = await fetch("http://localhost:3000/auth/validate", {
+        const response = await fetch("https://server.salmanfrds.com/auth/validate", {
           method: "GET",
           credentials: "include",
         });

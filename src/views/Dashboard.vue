@@ -8,7 +8,7 @@ const errorMessage = ref("");
 
 async function fetchDashboard() {
     try {
-      const response = await fetch("http://localhost:3000/api/dashboard", {
+      const response = await fetch("https://server.salmanfrds.com/api/dashboard", {
           method: "GET",
           credentials: "include", // ✅ Sends cookies (JWT)
       });
@@ -34,7 +34,7 @@ async function deleteArticle(id, name) {
   if (!confirmDelete) return; // Stop execution if user cancels
 
   try {
-    const response = await fetch("http://localhost:3000/api/delete", {
+    const response = await fetch("https://server.salmanfrds.com/api/delete", {
       method: "POST",
       credentials: "include", // ✅ Sends cookies (JWT)
       headers: {

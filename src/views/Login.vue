@@ -58,8 +58,9 @@ export default {
       console.log("Password:", this.password);
 
       // Perform your login logic (e.g., API request)
-      fetch("http://localhost:3000/api/login", {
+      fetch("https://server.salmanfrds.com/api/login", {
         method: "POST",
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },

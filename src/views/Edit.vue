@@ -111,7 +111,7 @@ export default defineComponent({
 
       // console.log("after:" + details)
       try {
-        const response = await fetch(`http://localhost:3000/api/edit/${this.articleId}`, {
+        const response = await fetch(`https://server.salmanfrds.com/api/edit/${this.articleId}`, {
           method: "POST",
           body: form,
           credentials: "include",
@@ -146,7 +146,7 @@ export default defineComponent({
     },
     async fetchArticleData(id) {
       try {
-        const response = await fetch(`http://localhost:3000/api/edit/${id}`, {
+        const response = await fetch(`https://server.salmanfrds.com/api/edit/${id}`, {
           method: "GET",
           credentials: "include",
         });
