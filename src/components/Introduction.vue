@@ -1,8 +1,20 @@
-<script setup></script>
+<script>
+    import AOS from 'aos';
+    import 'aos/dist/aos.css';
+
+    export default {
+      mounted(){
+        AOS.init({
+          duration: 300,
+          once: true
+        });
+      }
+    };    
+</script>
 
 <template>
-    <section class="bg-white rounded-lg shadow-lg min-h-[25vh] flex flex-col gap-4 mt-12 py-8">
-        <div class="bg-gray-200 rounded-lg w-4/5 md:w-3/4 aspect-[2/1] mx-auto">
+    <section class="bg-gradient-to-br from-zinc-200 via-white to-zinc-50 rounded-lg shadow-lg mih-h-[50vh] xl:min-h-screen flex flex-col gap-4 py-18">
+        <div class="bg-gray-200 rounded-lg w-4/5 md:w-3/4 aspect-[2/1] mx-auto" data-aos="fade-down">
             Banner
         </div>
         <div class="text-gray-800 text-2xl md:text-3xl font-bold w-4/5 md:w-3/4 mx-auto">Tentang PPI-IIUM</div>

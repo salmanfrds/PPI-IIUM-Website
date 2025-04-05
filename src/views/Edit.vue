@@ -2,7 +2,7 @@
   <div class="bg-gray-300 min-h-screen flex flex-col items-center justify-center mt-16 py-8">
     <div id="adminPage" class="w-[90vw] bg-white shadow-2xl rounded-xl p-4 border border-gray-400">
       <h1 class="text-3xl font-bold text-center text-gray-800 mb-8 uppercase tracking-wider">
-        Post
+        Edit Post
       </h1>
       <form @submit.prevent="handleSubmit" class="space-y-6" enctype="multipart/form-data">
         <div class="col-span-1 md:col-span-2">
@@ -95,6 +95,9 @@ export default defineComponent({
     }
   },
   methods: {
+    redirectToDashboard() {
+      this.$router.push('/dashboard');
+    },
     handleImageUpload(event) {
       // Optionally handle image validation or preview
       console.log("Image selected:", event.target.files[0]);
@@ -126,7 +129,7 @@ export default defineComponent({
           "Your article has been successfully edited."
         );
         console.log("Article updated:", data);
-        setTimeout(() => location.reload(), 2000);
+        this.redirectToDashboard();
       } catch (error) {
         console.error("Error:", error);
         this.showNotification(

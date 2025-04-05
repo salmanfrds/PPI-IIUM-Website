@@ -7,6 +7,7 @@
     import LITBANG from "@/assets/litbang.png";
     import MEDIFO from "@/assets/medifo.png";
     import PND from "@/assets/pnd.png";
+    import 'aos/dist/aos.css';
 
     const pengurus = [
       { name: "BPH", image: BPH, link: "https://www.instagram.com/p/DEwcL_XS77K/?igsh=anRvMnFwY3Q5cDV0" },
@@ -21,11 +22,11 @@
 </script>
 
 <template>
-  <section class="bg-gray-200 min-h-[50vh] py-8 px-4 flex flex-col justify-center items-center">
+  <section class="bg-gradient-to-br from-zinc-200 via-white to-zinc-50 min-h-[50vh] lg:min-h-screen py-8 px-4 flex flex-col justify-center items-center">
     <h2 class="text-gray-800 text-2xl md:text-3xl font-bold text-center mb-12">PENGURUS PPI-IIUM <br> <span class="text-xl md:text-2xl text-gray-600">2024/2025</span> </h2>
-    <div class="grid grid-cols-2 xl:grid-cols-4 gap-4">
+    <div data-aos="fade-down" class="grid grid-cols-2 xl:grid-cols-4 gap-6">
       <a v-for="item in pengurus" :key="item.name" :href="item.link">
-        <div class="aspect-square w-[40vw] xl:w-[20vw] bg-gray-900 text-white flex items-center justify-center rounded-lg md:rounded-xl shadow-md hover:shadow-2xl transform transition duration-300 hover:scale-103">
+        <div class="aspect-square w-[40vw] xl:w-[20vw] bg-gray-900 text-white flex items-center justify-center rounded-md md:rounded-lg shadow-md hover:shadow-2xl transform transition duration-300 hover:scale-103">
           <img :src="item.image" class="w-11/12 rounded-sm md:rounded-md" :alt="item.name" />
         </div>
       </a>

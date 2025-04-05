@@ -29,22 +29,10 @@ const toggleSidebar = () => {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
   }
-  
-  .judson-bold {
-    font-family: "Judson", serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-
-  .judson-regular-italic {
-    font-family: "Judson", serif;
-    font-weight: 400;
-    font-style: italic;
-  }
 
   * {
-    font-family: "Judson", serif;
-    font-weight: 400;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
     font-style: normal;
   }
 

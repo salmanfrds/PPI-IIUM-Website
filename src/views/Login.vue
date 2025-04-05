@@ -1,8 +1,8 @@
 <template>
-  <div id="loginPage" class="min-h-[80vh] w-full flex items-center justify-center mt-12 py-8">
-    <div class="w-full max-w-md">
+  <section id="loginPage" class="min-h-screen w-full flex items-center justify-center my-auto py-14 bg-gradient-to-br from-zinc-200 via-white to-zinc-50">
+    <div class="w-full max-w-md px-4">
       <div class="bg-white shadow-2xl rounded-xl overflow-hidden">
-        <div class="p-8">
+        <div class="p-6">
           <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">
             Login
           </h2>
@@ -14,7 +14,7 @@
                 class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300" />
             </div>
             <div>
-              <label for="password" class="block text-left text-sm font-medium text-gray-700 mb-2">Password</label>
+              <label for="password" class="block text-left text-sm font-medium text-gray-700 mb-2">Password <span v-if="wrongPass" class="text-red-500 ml-2">{{ wrongPass }} </span></label>
               <input type="password" id="password" v-model="password" name="password" required
                 placeholder="Enter your password"
                 class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300" />
@@ -26,10 +26,20 @@
               </button>
             </div>
           </form>
+          <div class="mt-6 text-center">
+            <a
+              href="https://wa.me/6282120547409?text=Halo%2C%20saya%20ingin%20mendaftar%20akun%20PPI%20IIUM.%20Mohon%20informasinya.%20Terima%20kasih."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block mt-2 text-sm font-semibold text-green-600 hover:text-green-800 transition"
+            >
+              Register via WhatsApp
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -49,6 +59,7 @@ export default {
     return {
       email: "",
       password: "",
+      wrongPass: "",
     };
   },
   methods: {
@@ -89,8 +100,13 @@ export default {
         });
     },
     check(resData) {
-      // Define your logic for checking the response data
       console.log("Response from server:", resData);
+      // display wrong email or password button
+      if (resData.success === false){
+        this.wrongPass = "Wrong email or password, please try again";
+      } else {
+        this.wrongPass = "";
+      }
     },
   },
 };
