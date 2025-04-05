@@ -80,7 +80,7 @@
             </div>
 
             <!-- Article Content -->
-            <div class="bg-white rounded-xl shadow-sm p-6 md:p-8 lg:p-10 mb-10 mx-4 md:mx-0">
+            <div class="bg-white rounded-xl shadow-sm p-2 md:p-6 lg:p-8 mb-10 mx-4 md:mx-0">
                 <div ref="quillContainer" class="prose prose-lg max-w-none text-gray-800 leading-relaxed"></div>
             </div>
 

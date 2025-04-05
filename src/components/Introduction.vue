@@ -13,7 +13,7 @@
 </script>
 
 <template>
-    <section class="bg-gradient-to-br from-zinc-200 via-white to-zinc-50 rounded-lg shadow-lg mih-h-[50vh] xl:min-h-screen flex flex-col gap-4 py-18">
+    <section class="bg-gradient-to-br from-zinc-200 via-white to-zinc-50 rounded-lg shadow-lg mih-h-[50vh] xl:min-h-screen flex flex-col gap-4 pt-24 pb-10">
         <div class="bg-gray-200 rounded-lg w-4/5 md:w-3/4 aspect-[2/1] mx-auto" data-aos="fade-down">
             Banner
         </div>
