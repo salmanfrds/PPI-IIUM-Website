@@ -13,7 +13,7 @@ import PenaKastrat from '@/components/Pena-Kastrat.vue';
 import Seboga from '@/components/Seboga.vue';
 import RuangCerita from '@/components/Ruang-Cerita.vue';
 import Edit from '@/views/Edit.vue';
-import Ruanggaung from '@/components/Ruanggaung.vue';
+import Litbang from '@/components/Litbang.vue';
 
 const routes = [
   {
@@ -48,14 +48,14 @@ const routes = [
         component: Seboga,
       },
       {
-        path: 'ruang-cerita', // This creates /pena-kita/all
+        path: 'cerita', // This creates /pena-kita/all
         name: 'RuangCerita',
         component: RuangCerita,
       },
       {
-        path: 'ruanggaung', // This creates /pena-kita/all
-        name: 'RuangGaung',
-        component: Ruanggaung,
+        path: 'litbang', // This creates /pena-kita/all
+        name: 'Litbang',
+        component: Litbang,
       },
     ],
   },

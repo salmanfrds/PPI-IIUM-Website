@@ -50,7 +50,8 @@
                   <option value="" disabled selected>Select a category</option>
                   <option value="Pena Kastrat">Pena Kastrat</option>
                   <option value="Seboga">Seboga</option>
-                  <option value="Ruang Cerita">Ruang Cerita</option>
+                  <option value="Cerita">Cerita</option>
+                  <option value="Litbang">Litbang</option>
                   <option value="Lain Lain">Lain-Lain</option>
                 </select>
                 <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">

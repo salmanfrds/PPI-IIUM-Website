@@ -1,9 +1,11 @@
 <template>
     <section class="py-8 min-h-[50vh] xl:min-h-screen flex flex-col gap-8 bg-gradient-to-br from-zinc-100 via-zinc-200 to-zinc-300">
-        <h2 class="text-center font-bold text-2xl md:text-3xl text-gray-800">TERBARU DARI KAMI</h2>
+        <h2 class="text-4xl font-bold text-center text-gray-800">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-zinc-600 to-zinc-500">Terbaru</span>
+        </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 px-12 md:px-8 gap-8">
             <div data-aos="fade-down" v-for="(article, index) in articles" :key="index"
-                class="bg-white border border-zinc-200 text-zinc-800 rounded-md shadow-lg hover:shadow-2xl transition-all duration-300 grid grid-col-1 gap-1">
+                class="bg-white border border-zinc-200 text-zinc-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
                 <router-link :to="`/article/${article._id}`">
                   <h2 class="text-base md:text-xl text-center font-bold text-gray-800 hover:text-gray-600 transition-all duration-300 p-2">
                       {{ article.title }}

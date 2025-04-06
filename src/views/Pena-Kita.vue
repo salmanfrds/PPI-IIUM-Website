@@ -14,22 +14,25 @@ const changeFilter = (filter) => {
 
 <template>
   <section class="py-20 min-h-[50vh] lg:min-h-screen flex flex-col gap-4 w-full bg-gradient-to-br from-zinc-200 via-white to-zinc-50">
-    <router-link
-      to="/dashboard"
-      class="fixed z-50 w-14 h-14 top-36 right-4 lg:top-24 lg:right-12 bg-zinc-200 border border-green-200 shadow-lg rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-green-200"
-      aria-label="Write a post"
-    >
-      <i class="fa-solid fa-pen-nib text-green-600 text-2xl"></i>
-    </router-link>
-    <div class="grid grid-cols-3 md:grid-cols-5 gap-2 mx-auto px-4">
+    <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 mx-auto px-4">
       <button
-        v-for="filter in ['all', 'pena-kastrat', 'seboga', 'ruang-cerita', 'ruanggaung']"
+        v-for="filter in ['all', 'pena-kastrat', 'seboga', 'cerita', 'litbang']"
         :key="filter"
         @click="changeFilter(filter)"
-        class="p-2 md:px-4 md:py-2 text-sm md:text-base rounded-full border bg-white border-zinc-500 text-zinc-800 hover:bg-zinc-500 hover:text-white transition-all duration-300"
+        class="h-14 px-2 text-sm md:text-base rounded-full border bg-white border-zinc-500 text-zinc-800 hover:bg-zinc-500 hover:text-white transition-all duration-300"
       >
         {{ filter.replace('-', ' ').toUpperCase() }}
       </button>
+      <router-link
+        to="/dashboard"
+        class="group inline-flex items-center bg-white border border-green-200 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        aria-label="Write a post"
+      >
+        <div class="flex items-center justify-center h-full aspect-square bg-green-100 rounded-full text-green-600 border border-green-200 shadow-sm">
+          <i class="fa-solid fa-pen-nib text-xl transition-all duration-300 group-hover:scale-110"></i>
+        </div>
+        <span class="font-medium ml-1 md:ml-2 text-green-600 transition-all duration-300 group-hover:text-green-700">Write</span>
+      </router-link>
     </div>
     <router-view />
   </section>

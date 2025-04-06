@@ -13,12 +13,33 @@
 </script>
 
 <template>
-    <section class="bg-gradient-to-br from-zinc-200 via-white to-zinc-50 rounded-lg shadow-lg mih-h-[50vh] xl:min-h-screen flex flex-col gap-4 pt-24 pb-10">
-        <div class="bg-gray-200 rounded-lg w-4/5 md:w-3/4 aspect-[2/1] mx-auto" data-aos="fade-down">
-            Banner
-        </div>
-        <div class="text-gray-800 text-2xl md:text-3xl font-bold w-4/5 md:w-3/4 mx-auto">Tentang PPI-IIUM</div>
-        <!-- Bagian teks -->
-        <div class="text-gray-700 text-sm md:text-base w-4/5 md:w-3/4 mx-auto">Kabinet Rangkasa melambangkan fondasi yang kokoh serta tujuan dan harapan bersama dalam mengembangkan potensi pelajar Indonesia melalui kolaborasi, komunikasi yang efektif, dan pendidikan sebagai pilar menuju kemajuan bersama.</div>
-    </section>
+  <section
+    class="bg-gradient-to-br from-zinc-200 via-white to-zinc-50 rounded-2xl shadow-xl min-h-[50vh] xl:min-h-screen flex flex-col gap-8 py-20 px-6"
+  >
+    <!-- Banner Placeholder -->
+    <div
+      class="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 rounded-xl w-full md:w-3/4 aspect-[2/1] mx-auto flex items-center justify-center text-gray-600 text-xl font-medium tracking-wide"
+      data-aos="fade-down"
+    >
+      Banner
+    </div>
+
+    <!-- Section Title -->
+    <div
+      class="text-gray-800 text-3xl md:text-4xl font-extrabold text-center w-full md:w-3/4 mx-auto"
+    >
+      Tentang PPI-IIUM
+    </div>
+
+    <!-- Divider -->
+    <div class="w-20 h-1 bg-zinc-500 mx-auto rounded-full" data-aos="zoom-in"></div>
+
+    <!-- Description Text -->
+    <div
+      class="text-gray-700 text-base md:text-lg leading-relaxed w-full md:w-3/4 mx-auto text-center md:text-justify"
+      data-aos="fade-up"
+    >
+      Kabinet Rangkasa melambangkan fondasi yang kokoh serta tujuan dan harapan bersama dalam mengembangkan potensi pelajar Indonesia melalui , komunikasi yang efektif, dan pendidikan sebagai pilar menuju kemajuan bersama.
+    </div>
+  </section>
 </template>

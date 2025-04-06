@@ -22,12 +22,46 @@
 </script>
 
 <template>
-  <section class="bg-gradient-to-br from-zinc-200 via-white to-zinc-50 min-h-[50vh] lg:min-h-screen py-8 px-4 flex flex-col justify-center items-center">
-    <h2 class="text-gray-800 text-2xl md:text-3xl font-bold text-center mb-12">PENGURUS PPI-IIUM <br> <span class="text-xl md:text-2xl text-gray-600">2024/2025</span> </h2>
-    <div data-aos="fade-down" class="grid grid-cols-2 xl:grid-cols-4 gap-6">
-      <a v-for="item in pengurus" :key="item.name" :href="item.link">
-        <div class="aspect-square w-[40vw] xl:w-[20vw] bg-gray-900 text-white flex items-center justify-center rounded-md md:rounded-lg shadow-md hover:shadow-2xl transform transition duration-300 hover:scale-103">
-          <img :src="item.image" class="w-11/12 rounded-sm md:rounded-md" :alt="item.name" />
+  <section class="bg-gradient-to-br from-zinc-200 via-white to-zinc-50 min-h-[50vh] lg:min-h-screen py-16 px-4 flex flex-col justify-center items-center">
+    <!-- Heading -->
+    <h2 class="text-gray-800 text-3xl md:text-4xl font-extrabold text-center mb-12 leading-relaxed">
+      PENGURUS PPI-IIUM <br />
+      <span class="text-xl md:text-2xl font-medium text-gray-600 tracking-wide">
+        2024 / 2025
+      </span>
+    </h2>
+
+    <!-- Cards Grid -->
+    <div data-aos="fade-up" class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6 w-full max-w-6xl">
+      <a
+        v-for="item in pengurus"
+        :key="item.name"
+        :href="item.link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group transform transition duration-300 hover:scale-[1.03]"
+      >
+        <div class="relative aspect-square w-full bg-gray-100 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+          <!-- Image -->
+          <img
+            :src="item.image"
+            :alt="item.name"
+            class="w-full h-full object-cover"
+          />
+
+          <!-- Overlay on hover -->
+          <div
+            class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center px-2"
+          >
+            <div class="text-white">
+              <h3 class="text-lg md:text-xl font-semibold">
+                {{ item.name }}
+              </h3>
+              <p class="text-sm md:text-base text-gray-300">
+                {{ item.role || "Anggota" }}
+              </p>
+            </div>
+          </div>
         </div>
       </a>
     </div>
