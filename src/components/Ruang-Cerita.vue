@@ -3,11 +3,11 @@
 <template>
   <section class="flex flex-col gap-8 mt-2">
     <h2 class="text-gray-800 text-2xl md:text-3xl font-bold text-center">PENA KITA<br> <span
-        class="text-xl md:text-2xl text-gray-600">RUANG CERITA</span>
+        class="text-xl md:text-2xl text-gray-600">CERITA</span>
     </h2>
     <div class="grid grid-cols-1 gap-4 mx-auto px-8 md:px-12" id="articles">
       <div v-for="(article, index) in articles" :key="index"
-        class=" md:w-[90%] lg:w-4/5 mx-auto bg-white border border-zinc-200 text-zinc-800 rounded-md shadow-lg hover:shadow-2xl transition-all duration-300">
+        class="w-full md:w-[90%] lg:w-4/5 mx-auto bg-white border border-zinc-200 text-zinc-800 rounded-md shadow-lg hover:shadow-2xl transition-all duration-300">
         <div class="grid grid-rows-none grid-cols-4">
           <div class="flex-grow flex flex-col col-span-4 md:col-span-3">
             <router-link :to="`/article/${article._id}`" class="group">

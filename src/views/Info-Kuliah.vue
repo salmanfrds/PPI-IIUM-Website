@@ -21,7 +21,10 @@ export default {
 
 <template>
   <section class="flex flex-col justify-center items-center min-h-[50vh] bg-gradient-to-br from-zinc-200 via-white to-zinc-50 mt-2 py-18">
-    <h2 class="text-gray-800 text-2xl md:text-3xl font-bold text-center mb-12">INFO KULIAH<br> <span class="text-xl md:text-2xl text-gray-600">PANDUAN, MATERI, & TIPS</span> </h2>
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-zinc-600 to-zinc-500">Info Kuliah <br></span>
+        <span class="text-xl md:text-2xl text-gray-600">PANDUAN, MATERI, & TIPS</span>
+    </h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       <div v-for="faculty in faculties" :key="faculty.name" class="bg-white shadow-md border border-zinc-200 text-zinc-800 rounded-md overflow-hidden flex flex-col items-center w-[45vw] md:w-[20vw]">
         <!-- Faculty Image -->

@@ -1,24 +1,41 @@
 <script></script>
 
 <template>
-    <section class="bg-gradient-to-br from-zinc-100 via-zinc-200 to-zinc-300 flex flex-col items-center justify-center min-h-[50vh] lg:mih-h-screen py-8 gap-10">
-        <h2 class="text-center text-3xl font-bold">OUR SOCIAL MEDIA</h2>
-        <div class="flex justify-center gap-2 md:gap-8">
+    <section
+        class="bg-gradient-to-br from-zinc-100 via-zinc-200 to-zinc-300 flex flex-col items-center justify-center min-h-[25vh] py-16 gap-10 px-4">
+        <!-- Title -->
+        <h2 class="text-4xl font-bold text-center text-gray-800">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-zinc-600 to-zinc-500">Social Media</span>
+        </h2>
+
+        <!-- Icons -->
+        <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8" data-aos="zoom-in">
             <!-- Instagram -->
-            <a href="#" class="flex items-center justify-center p-2 shadow-2xl rounded-md bg-white">
-                <img class="w-12 h-12" src="../assets/Instagram.svg" alt="">
+            <a href="#" target="_blank" aria-label="Instagram"
+                class="group flex items-center justify-center w-16 h-16 rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <img src="../assets/Instagram.svg" alt="Instagram"
+                    class="w-10 h-10 group-hover:scale-110 transition-transform duration-200" />
             </a>
+
             <!-- YouTube -->
-            <a href="#" class="flex items-center justify-center p-2 shadow-2xl rounded-md bg-white">
-                <img class="w-12 h-12" src="../assets/Youtube.svg" alt="">
+            <a href="#" target="_blank" aria-label="YouTube"
+                class="group flex items-center justify-center w-16 h-16 rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <img src="../assets/Youtube.svg" alt="YouTube"
+                    class="w-10 h-10 group-hover:scale-110 transition-transform duration-200" />
             </a>
+
             <!-- Telegram -->
-            <a href="https://t.me/PusatInformasiMahasiswa" class="flex items-center justify-center p-2 shadow-2xl rounded-md bg-white">
-                <img class="w-12 h-12" src="../assets/Telegram.svg" alt="">
+            <a href="https://t.me/PusatInformasiMahasiswa" target="_blank" aria-label="Telegram"
+                class="group flex items-center justify-center w-16 h-16 rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <img src="../assets/Telegram.svg" alt="Telegram"
+                    class="w-10 h-10 group-hover:scale-110 transition-transform duration-200" />
             </a>
+
             <!-- WhatsApp -->
-            <a href="#" class="flex items-center justify-center p-2 shadow-2xl rounded-md bg-white">
-                <img class="w-12 h-12" src="../assets/Whatsapp.svg" alt="">
+            <a href="#" target="_blank" aria-label="WhatsApp"
+                class="group flex items-center justify-center w-16 h-16 rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <img src="../assets/Whatsapp.svg" alt="WhatsApp"
+                    class="w-10 h-10 group-hover:scale-110 transition-transform duration-200" />
             </a>
         </div>
     </section>
