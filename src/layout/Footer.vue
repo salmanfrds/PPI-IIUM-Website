@@ -11,10 +11,10 @@
         <a href="https://wa.me/6282120547409"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
     </div>
     <nav class="grid grid-cols-2 lg:grid-cols-4 p-4 gap-2 text-center md:w-2/5 mx-auto">
-        <a href="#" class="hover:text-zinc-400 transition-color duration-200">Tentang Kami</a>
-        <a href="#" class="hover:text-zinc-400 transition-color duration-200">Kontak Kami</a> 
-        <a href="#" class="hover:text-zinc-400 transition-color duration-200">Pena Kita</a>
-        <a href="#" class="hover:text-zinc-400 transition-color duration-200">Info Kuliah</a>
+        <router-link to="/ppi-iium" class="hover:text-zinc-400 transition-color duration-200">Tentang Kami </router-link>
+        <router-link to="/kontak" class="hover:text-zinc-400 transition-color duration-200">Kontak Kami  </router-link> 
+        <router-link to="/pena-kita" class="hover:text-zinc-400 transition-color duration-200">Pena Kita    </router-link>
+        <router-link to="/info-kuliah" class="hover:text-zinc-400 transition-color duration-200">Info Kuliah  </router-link>
     </nav>
     <div class="w-full"><img :src="Logo" alt="Logo" class="w-12 mx-auto"></div>
     <div class="flex flex-row justify-center p-4">

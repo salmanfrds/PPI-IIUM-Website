@@ -125,7 +125,7 @@ const routes = [
     path: "/article/:id",
     name: 'Article',
     component: Article,
-    props: true,
+    props: true,  
   },
   {
     path: "/edit/:id",

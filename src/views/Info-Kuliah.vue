@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <section class="flex flex-col justify-center items-center min-h-[50vh] bg-gradient-to-br from-zinc-200 via-white to-zinc-50 mt-2 py-18">
+  <section class="flex flex-col justify-center items-center min-h-[50vh] bg-gradient-to-br from-zinc-200 via-white to-zinc-50 pt-20 pb-10">
     <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
         <span class="bg-clip-text text-transparent bg-gradient-to-r from-zinc-600 to-zinc-500">Info Kuliah <br></span>
         <span class="text-xl md:text-2xl text-gray-600">PANDUAN, MATERI, & TIPS</span>

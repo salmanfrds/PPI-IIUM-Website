@@ -14,7 +14,7 @@
 
 <template>
   <section
-    class="bg-gradient-to-br from-zinc-200 via-white to-zinc-50 rounded-2xl shadow-xl min-h-[50vh] xl:min-h-screen flex flex-col gap-8 py-20 px-6"
+    class="bg-gradient-to-br from-zinc-200 via-white to-zinc-50 rounded-2xl shadow-xl min-h-[50vh] xl:min-h-screen flex flex-col gap-8 pt-20 pb-10 px-6"
   >
     <!-- Banner Placeholder -->
     <div
@@ -26,7 +26,7 @@
 
     <!-- Section Title -->
     <div
-      class="text-gray-800 text-3xl md:text-4xl font-extrabold text-center w-full md:w-3/4 mx-auto"
+      class="text-gray-800 text-3xl md:text-4xl font-extrabold text-center w-full md:w-3/4 lg:mt-4 mx-auto"
     >
       Tentang PPI-IIUM
     </div>

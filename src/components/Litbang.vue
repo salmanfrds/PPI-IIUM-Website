@@ -2,8 +2,9 @@
 
 <template>
   <section class="flex flex-col gap-8 mt-2">
-    <h2 class="text-gray-800 text-2xl md:text-3xl font-bold text-center">PENA KITA<br> <span
-        class="text-xl md:text-2xl text-gray-600">LITBANG</span>
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-">
+      <span class="bg-clip-text text-transparent bg-gradient-to-r from-zinc-600 to-zinc-500">Pena Kita<br></span>
+      <span class="text-xl md:text-2xl text-gray-600">Penelitian Pengembangan</span>
     </h2>
     <div class="grid grid-cols-1 gap-4 mx-auto px-8 md:px-12" id="articles">
       <div v-for="(article, index) in articles" :key="index"

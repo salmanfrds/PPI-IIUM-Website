@@ -12,9 +12,9 @@
     };
 </script>
 <template>
-    <section class="bg-gradient-to-br from-zinc-200 via-white to-zinc-50 flex flex-col items-center justify-center min-h-[50vh] md:min-h-screen mt-6 py-16 gap-12 px-4">
+    <section class="bg-gradient-to-br from-zinc-200 via-white to-zinc-50 flex flex-col items-center justify-center min-h-[50vh] md:min-h-screen pt-20 pb-10 gap-12 px-4">
       <!-- Section Title -->
-      <h2 class="text-4xl font-bold text-center text-gray-800">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mt-2">
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-zinc-600 to-zinc-500">Kunjungan</span>
         </h2>
   
