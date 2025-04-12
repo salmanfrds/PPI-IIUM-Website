@@ -3,8 +3,9 @@
     <div class="w-full max-w-md px-4">
       <div class="bg-white shadow-2xl rounded-xl overflow-hidden">
         <div class="p-6">
-          <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">
+          <h2 class="text-3xl relative font-bold text-center text-gray-800 mb-6">
             Login
+            <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-zinc-600 to-zinc-500 rounded-full"></div>
           </h2>
           <form id="loginForm" @submit.prevent="handleSubmit" class="space-y-6">
             <div>

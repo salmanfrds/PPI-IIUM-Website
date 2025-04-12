@@ -13,8 +13,8 @@ const toggleSidebar = () => {
 </script>
 
 <template>
-  <div>
-    <Sidebar :isOpen="isSidebarOpen" @close="isSidebarOpen = false" />
+  <div class="relative">
+    <Sidebar :isOpen="isSidebarOpen" @close="isSidebarOpen = false"  />
     <Header @toggleSidebar="toggleSidebar" />
     <main>
       <router-view/>

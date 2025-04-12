@@ -24,11 +24,12 @@
 <template>
   <section class="bg-gradient-to-br from-zinc-200 via-white to-zinc-50 min-h-[50vh] lg:min-h-screen py-16 px-4 flex flex-col justify-center items-center">
     <!-- Heading -->
-    <h2 class="text-gray-800 text-3xl md:text-4xl font-extrabold text-center mb-12 leading-relaxed">
+    <h2 class="text-gray-800 text-3xl relative md:text-4xl font-extrabold text-center mb-12 leading-relaxed">
       PENGURUS PPI-IIUM <br />
       <span class="text-xl md:text-2xl font-medium text-gray-600 tracking-wide">
         2024 / 2025
       </span>
+      <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-zinc-600 to-zinc-500 rounded-full"></div>
     </h2>
 
     <!-- Cards Grid -->

@@ -4,8 +4,9 @@
     <section
         class="bg-gradient-to-br from-zinc-100 via-zinc-200 to-zinc-300 flex flex-col items-center justify-center min-h-[25vh] py-16 gap-10 px-4">
         <!-- Title -->
-        <h2 class="text-4xl font-bold text-center text-gray-800">
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-zinc-600 to-zinc-500">Social Media</span>
+        <h2 class="text-4xl font-bold text-center text-gray-800 mt-2 relative">
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-zinc-600 to-zinc-500">Social Media</span>
+          <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-zinc-600 to-zinc-500 rounded-full"></div>
         </h2>
 
         <!-- Icons -->
