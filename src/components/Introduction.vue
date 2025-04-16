@@ -18,11 +18,19 @@
   >
     <!-- Banner Placeholder -->
     <div
-      class="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 rounded-xl w-full md:w-3/4 aspect-[2/1] mx-auto flex items-center justify-center text-gray-600 text-xl font-medium tracking-wide"
-      data-aos="fade-down"
-    >
-      Banner
-    </div>
+  class="relative w-full md:w-3/4 aspect-[2/1] mx-auto flex items-center justify-center p-2"
+  data-aos="fade-down"
+>
+  <!-- Decorative rounded background -->
+  <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-zinc-100 to-zinc-200 shadow-lg"></div>
+
+  <!-- Actual image with rounded corners -->
+  <img
+    src="../assets/anggota.jpg"
+    alt="Anggota"
+    class="relative rounded-xl w-full h-full object-cover shadow-md"
+  />
+</div>
 
     <!-- Section Title -->
     <div

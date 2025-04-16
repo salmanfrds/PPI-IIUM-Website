@@ -1,12 +1,12 @@
 <script setup>
-    import BPH from "@/assets/BPH.png";
-    import SEBOGA from "@/assets/seboga.png";
-    import DANUS from "@/assets/danus.png";
-    import KASTRAT from "@/assets/kastrat.png";
-    import KESMA from "@/assets/kesma.png";
-    import LITBANG from "@/assets/litbang.png";
-    import MEDIFO from "@/assets/medifo.png";
-    import PND from "@/assets/pnd.png";
+    import BPH from "@/assets/bph.jpg";
+    import SEBOGA from "@/assets/seboga.jpg";
+    import DANUS from "@/assets/danus.jpg";
+    import KASTRAT from "@/assets/kastrat.jpg";
+    import KESMA from "@/assets/kesma.jpg";
+    import LITBANG from "@/assets/litbang.jpg";
+    import MEDIFO from "@/assets/medifo.jpg";
+    import PND from "@/assets/pnd.jpg";
     import 'aos/dist/aos.css';
 
     const pengurus = [
