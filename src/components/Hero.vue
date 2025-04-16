@@ -42,7 +42,7 @@ export default {
   <section
     :style="`background-image: url(${currentBg})`"
     class="min-h-[70vh]  bg-cover bg-center xl:min-h-screen flex flex-col justify-center items-center text-zinc-800 overflow-hidden pt-6 relative">
-    <div class="absolute inset-0 bg-white/40 backdrop-brightness-100 z-0"></div>
+    <div class="absolute inset-0 bg-white/55 backdrop-brightness-90 z-0"></div>
     <!-- Background decorative elements -->
     <div
       class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-zinc-300/30 to-transparent rounded-full blur-3xl -z-10 transform translate-x-1/2 -translate-y-1/2">
