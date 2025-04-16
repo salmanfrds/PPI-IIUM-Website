@@ -2,7 +2,7 @@
 import App from '@/views/HomeLanding.vue';
 import PpiIium from '@/views/PPI-IIUM.vue';
 import PenaKita from '@/views/Pena-Kita.vue';
-import InfoKuliah from '@/views/Info-Kuliah.vue';
+import AcademicCorner from '@/views/AcademicCorner.vue';
 import Kontak from '@/views/Kontak.vue';
 import All from '@/components/All-Article.vue'
 import Login from '@/views/Login.vue';
@@ -61,8 +61,8 @@ const routes = [
   },
   {
     path: '/academic-corner',
-    name: 'InfoKuliah',
-    component: InfoKuliah,
+    name: 'AcademicCorner',
+    component: AcademicCorner,
   },
   {
     path: '/kontak',
