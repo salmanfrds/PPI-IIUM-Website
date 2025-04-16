@@ -2,11 +2,13 @@
 import Kabinet from "@/assets/Kabinet-Rangkasa.jpg";
 import AOS from 'aos'; // ✅ You need this
 import 'aos/dist/aos.css';
+import bg from "../assets/iium.webp"
 
 export default {
   data() {
     return {
-      Kabinet
+      Kabinet,
+      bg
     };
   },
   mounted() {
@@ -20,7 +22,9 @@ export default {
 
 <template>
   <section
-    class="min-h-[70vh] xl:min-h-screen flex flex-col justify-center items-center text-zinc-800 bg-gradient-to-br from-zinc-200 via-white to-zinc-50 overflow-hidden pt-6 relative">
+    :style="`background-image: url(${bg})`"
+    class="min-h-[70vh] bg-cover bg-center xl:min-h-screen flex flex-col justify-center items-center text-zinc-800 overflow-hidden pt-6 relative">
+    <div class="absolute inset-0 bg-white/40 backdrop-brightness-100 z-0"></div>
     <!-- Background decorative elements -->
     <div
       class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-zinc-300/30 to-transparent rounded-full blur-3xl -z-10 transform translate-x-1/2 -translate-y-1/2">
@@ -48,7 +52,7 @@ export default {
         </div>
 
         <!-- Description with improved typography -->
-        <p class="text-lg text-zinc-700 leading-relaxed max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
+        <p class="text-lg text-black leading-relaxed max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
           Kabinet Rangkasa melambangkan fondasi yang kokoh serta tujuan dan harapan bersama dalam mengembangkan potensi
           pelajar Indonesia melalui <span class="text-black font-medium">kolaborasi</span>, <span
             class="text-black font-medium">komunikasi</span> yang efektif, dan <span
@@ -70,7 +74,7 @@ export default {
         </div>
 
         <!-- Optional social proof or statistics -->
-        <div class="flex gap-8 justify-center lg:justify-start mt-2 pt-4 border-t border-zinc-200">
+        <div class="flex gap-8 justify-center lg:justify-start mt-2 pt-4 border-t border-zinc-800">
           <div class="text-center">
             <p class="text-3xl font-bold">500+</p>
             <p class="text-sm text-zinc-600">Anggota</p>

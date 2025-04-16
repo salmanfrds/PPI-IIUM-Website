@@ -60,7 +60,7 @@ const routes = [
     ],
   },
   {
-    path: '/info-kuliah',
+    path: '/academic-corner',
     name: 'InfoKuliah',
     component: InfoKuliah,
   },

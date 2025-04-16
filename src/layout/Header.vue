@@ -23,7 +23,7 @@
   
   const rightNavItems = [
     { title: 'Pena Kita', path: '/pena-kita', isButton: false },
-    { title: 'Info Kuliah', path: '/info-kuliah', isButton: false },
+    { title: 'Academic', path: '/academic-corner', isButton: false },
     { title: 'Login', path: '/dashboard', isButton: true }
   ];
 </script>
