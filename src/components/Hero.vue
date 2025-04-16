@@ -2,28 +2,46 @@
 import Kabinet from "@/assets/Kabinet-Rangkasa.jpg";
 import AOS from 'aos'; // ✅ You need this
 import 'aos/dist/aos.css';
-import bg from "../assets/iium.webp"
+import bg from "../assets/iium.jpg"
+import bgMobile from "../assets/iium-mobile.jpg";
 
 export default {
   data() {
     return {
       Kabinet,
-      bg
+      bg,
+      bgMobile
     };
+  },
+  computed: {
+    // Dynamically set background based on window size
+    currentBg() {
+      return window.innerWidth < 768 ? this.bgMobile : this.bg;  // Assuming 768px as mobile size breakpoint
+    }
   },
   mounted() {
     AOS.init({
       duration: 300,
       once: true
     });
+    // You can also listen for window resize to update the background
+    window.addEventListener('resize', this.updateBackground);
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.updateBackground);  // Clean up the event listener
+  },
+  methods: {
+    updateBackground() {
+      this.bg = window.innerWidth < 768 ? this.bgMobile : this.bg;
+    }
   }
 };
 </script>
 
 <template>
   <section
-    :style="`background-image: url(${bg})`"
-    class="min-h-[70vh] bg-cover bg-center xl:min-h-screen flex flex-col justify-center items-center text-zinc-800 overflow-hidden pt-6 relative">
+    :style="`background-image: url(${currentBg})`"
+    class="min-h-[70vh]  bg-cover bg-center xl:min-h-screen flex flex-col justify-center items-center text-zinc-800 overflow-hidden pt-6 relative">
     <div class="absolute inset-0 bg-white/40 backdrop-brightness-100 z-0"></div>
     <!-- Background decorative elements -->
     <div
