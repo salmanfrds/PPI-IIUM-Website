@@ -8,7 +8,7 @@
           Visi & Misi
         </h1>
         <h4 class="text-xl md:text-2xl text-gray-600 font-medium">
-          Perhimpunan Pelajar Indonesia IIUM
+          Persatuan Pelajar Indonesia IIUM
         </h4>
         <div class="w-16 h-1 bg-zinc-500 mx-auto mt-4 rounded-full"></div>
       </div>
