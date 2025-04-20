@@ -99,22 +99,22 @@ const sidebarClasses = computed(() =>
                 <p class="text-sm mb-4">Persatuan Pelajar Indonesia</p>
                 <div class="flex space-x-4 text-zinc-00">
                     <!-- Instagram -->
-                    <a href="#" class="transition-colors duration-300 hover:text-pink-500">
+                    <a href="https://www.instagram.com/ppiiium/" class="transition-colors duration-300 hover:text-pink-500">
                         <i class="fab fa-instagram text-lg"></i>
                     </a>
 
                     <!-- YouTube -->
-                    <a href="#" class="transition-colors duration-300 hover:text-red-600">
+                    <a href="https://www.youtube.com/@newppiiium/videos" class="transition-colors duration-300 hover:text-red-600">
                         <i class="fab fa-youtube text-lg"></i>
                     </a>
 
                     <!-- Telegram -->
-                    <a href="#" class="transition-colors duration-300 hover:text-blue-500">
+                    <a href="https://t.me/PusatInformasiMahasiswa" class="transition-colors duration-300 hover:text-blue-500">
                         <i class="fab fa-telegram text-lg"></i>
                     </a>
 
                     <!-- WhatsApp -->
-                    <a href="#" class="transition-colors duration-300 hover:text-green-500">
+                    <a href="https://wa.me/60134298449" class="transition-colors duration-300 hover:text-green-500">
                         <i class="fab fa-whatsapp text-lg"></i>
                     </a>
                 </div>

@@ -81,10 +81,10 @@ export default {
         <div class="flex flex-wrap gap-4 justify-center lg:justify-start mt-2">
           <router-link to="/Kontak"
             class="text-zinc-900 bg-white border-2 border-zinc-900 py-3 px-6 rounded-full shadow-md hover:shadow-lg inline-flex items-center gap-2 font-medium transition-all duration-300 hover:-translate-y-1">
-            Kunjungan
+            Kontak
             <i class="fa-solid fa-arrow-right-long text-sm"></i>
           </router-link>
-          <router-link to="/Kontak"
+          <router-link to="/ppi-iium"
             class="text-white bg-zinc-900 py-3 px-6 rounded-full shadow-md hover:shadow-xl inline-flex items-center gap-2 font-medium transition-all duration-300 hover:-translate-y-1">
             Tentang Kami
             <i class="fa-solid fa-users text-sm"></i>
