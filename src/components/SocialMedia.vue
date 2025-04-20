@@ -12,14 +12,14 @@
         <!-- Icons -->
         <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8" data-aos="zoom-in">
             <!-- Instagram -->
-            <a href="#" target="_blank" aria-label="Instagram"
+            <a href="https://www.instagram.com/ppiiium" target="_blank" aria-label="Instagram"
                 class="group flex items-center justify-center w-16 h-16 rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <img src="../assets/Instagram.svg" alt="Instagram"
                     class="w-10 h-10 group-hover:scale-110 transition-transform duration-200" />
             </a>
 
             <!-- YouTube -->
-            <a href="#" target="_blank" aria-label="YouTube"
+            <a href="https://www.youtube.com/@newppiiium/videos" target="_blank" aria-label="YouTube"
                 class="group flex items-center justify-center w-16 h-16 rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <img src="../assets/Youtube.svg" alt="YouTube"
                     class="w-10 h-10 group-hover:scale-110 transition-transform duration-200" />
@@ -33,7 +33,7 @@
             </a>
 
             <!-- WhatsApp -->
-            <a href="#" target="_blank" aria-label="WhatsApp"
+            <a href="https://wa.me/60134298449" target="_blank" aria-label="WhatsApp"
                 class="group flex items-center justify-center w-16 h-16 rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <img src="../assets/Whatsapp.svg" alt="WhatsApp"
                     class="w-10 h-10 group-hover:scale-110 transition-transform duration-200" />

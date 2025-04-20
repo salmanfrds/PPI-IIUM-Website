@@ -8,7 +8,7 @@
         <a href="https://www.instagram.com/ppiiium"><i class="fa-brands fa-instagram fa-xl"></i></a>
         <a href="https://t.me/PusatInformasiMahasiswa"><i class="fa-brands fa-telegram fa-xl"></i></a>
         <a href="https://www.youtube.com/@newppiiium/videos"><i class="fa-brands fa-youtube fa-xl"></i></a>
-        <a href="https://wa.me/6282120547409"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+        <a href="https://wa.me/60134298449"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
     </div>
     <nav class="grid grid-cols-2 lg:grid-cols-4 p-4 gap-2 text-center md:w-2/5 mx-auto">
         <router-link to="/ppi-iium" class="hover:text-zinc-400 transition-color duration-200">About Us</router-link>
