@@ -44,10 +44,11 @@
 
     <!-- Description Text -->
     <div
-      class="text-gray-700 text-base md:text-lg leading-relaxed w-full md:w-3/4 mx-auto text-center md:text-justify"
+      class="text-gray-700 text-base md:text-lg leading-relaxed w-full md:w-3/4 mx-auto text-justify"
       data-aos="fade-up"
     >
-      Kabinet Rangkasa melambangkan fondasi yang kokoh serta tujuan dan harapan bersama dalam mengembangkan potensi pelajar Indonesia melalui , komunikasi yang efektif, dan pendidikan sebagai pilar menuju kemajuan bersama.
+    Persatuan Pelajar Indonesia International Islamic University Malaysia (PPI IIUM) merupakan organisasi yang mewadahi seluruh mahasiswa Indonesia di IIUM. PPI IIUM hadir sebagai pemersatu, pengembangan kapasitas diri, serta penyalur aspirasi mahasiswa dalam berbagai aspek kehidupan akademik dan sosial. <br><br>
+    Sebagai entitas yang menjunjung tinggi nilai intelektual, spiritual, dan kebangsaan, PPI IIUM berkomitmen untuk mempererat ukhuwah Islamiyah, memperkuat jati diri keindonesiaan di ranah internasional, serta mendukung pencapaian prestasi baik di bidang akademik maupun non-akademik. Selain itu, PPI IIUM juga berperan strategis dalam menyediakan layanan informasi, serta menyelenggarakan program-program edukatif, sosial, dan kebudayaan yang konstruktif dan berdaya guna bagi mahasiswa Indonesia di lingkungan IIUM.
     </div>
   </section>
 </template>

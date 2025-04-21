@@ -41,8 +41,8 @@ export default {
 <template>
   <section
     :style="`background-image: url(${currentBg})`"
-    class="min-h-[70vh]  bg-cover bg-center xl:min-h-screen flex flex-col justify-center items-center text-zinc-800 overflow-hidden pt-6 relative">
-    <div class="absolute inset-0 bg-white/60 backdrop-brightness-90 z-0"></div>
+    class="min-h-[70vh]  bg-cover bg-center xl:min-h-screen flex flex-col justify-center items-center text-zinc-800 overflow-hidden pt-3 relative">
+    <div class="absolute inset-0 bg-zinc-200/75 backdrop-brightness-100 z-0"></div>
     <!-- Background decorative elements -->
     <div
       class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-zinc-300/30 to-transparent rounded-full blur-3xl -z-10 transform translate-x-1/2 -translate-y-1/2">
@@ -62,7 +62,7 @@ export default {
 
         <!-- Headings -->
         <div class="space-y-2 text-center lg:text-left">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
             <span class="text-black">PPI IIUM.</span>
             <span class="text-zinc-600 font-normal">2024/2025</span>
           </h1>
@@ -70,11 +70,8 @@ export default {
         </div>
 
         <!-- Description with improved typography -->
-        <p class="text-lg text-black leading-relaxed max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
-          Kabinet Rangkasa melambangkan fondasi yang kokoh serta tujuan dan harapan bersama dalam mengembangkan potensi
-          pelajar Indonesia melalui <span class="text-black font-medium">kolaborasi</span>, <span
-            class="text-black font-medium">komunikasi</span> yang efektif, dan <span
-            class="text-black font-medium">pendidikan</span> sebagai pilar menuju kemajuan bersama.
+        <p class="text-black leading-relaxed max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
+          Kabinet Rangkasa mencerminkan pondasi yang kuat dan tujuan bersama dalam mengembangkan potensi pelajar Indonesia di IIUM melalui pendidikan, kolaborasi, dan komunikasi yang efektif. Nama Rangkasa sendiri melambangkan struktur yang kokoh dan kesatuan visi dalam mendukung setiap langkah menuju kemajuan bersama, memastikan bahwa setiap individu dapat berkembang secara optimal dalam lingkungan yang mendorong sinergi dan inovasi.
         </p>
 
         <!-- Buttons with improved styling -->
@@ -111,14 +108,11 @@ export default {
       <!-- Image column with improved presentation -->
       <div class="relative flex items-center justify-center lg:justify-end" data-aos="fade-left"
         data-aos-duration="1000" data-aos-delay="300">
-        <div
-          class="absolute inset-0 bg-gradient-to-br from-zinc-800/10 to-zinc-800/5 rounded-2xl transform rotate-3 scale-95">
-        </div>
         <img :src="Kabinet" alt="Kabinet Rangkasa PPI IIUM"
-          class="rounded-2xl shadow-xl relative z-10 w-full max-w-lg lg:max-w-none object-cover transition-all duration-700 hover:shadow-2xl"
+          class="mb-4 rounded-2xl shadow-xl relative z-10 w-full max-w-lg lg:max-w-none object-cover transition-all duration-700 hover:shadow-2xl"
           loading="lazy" />
         <!-- Optional floating element -->
-        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-lg z-20">
+        <div class="absolute bottom-8 left-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-lg z-20">
           <p class="font-medium">Pelantikan Kabinet</p>
           <p class="text-sm text-zinc-600">Juni 2024</p>
         </div>
