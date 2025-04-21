@@ -41,7 +41,7 @@ export default {
 <template>
   <section
     :style="`background-image: url(${currentBg})`"
-    class="min-h-[70vh]  bg-cover bg-center xl:min-h-screen flex flex-col justify-center items-center text-zinc-800 overflow-hidden pt-3 relative">
+    class="min-h-[70vh]  bg-cover bg-center xl:min-h-screen flex flex-col justify-center items-center text-zinc-800 overflow-hidden pt-6 relative">
     <div class="absolute inset-0 bg-zinc-200/75 backdrop-brightness-100 z-0"></div>
     <!-- Background decorative elements -->
     <div
