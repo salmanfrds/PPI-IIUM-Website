@@ -16,7 +16,7 @@ const changeFilter = (filter) => {
   <section class="py-20 min-h-[50vh] lg:min-h-screen flex flex-col gap-4 w-full bg-gradient-to-br from-zinc-200 via-white to-zinc-50">
     <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-1 md:gap-2 mx-auto px-4">
       <button
-        v-for="filter in ['all', 'pena-kastrat', 'seboga', 'cerita', 'litbang']"
+        v-for="filter in ['all', 'pena-kastrat', 'seboga', 'liputan-khusus', 'litbang']"
         :key="filter"
         @click="changeFilter(filter)"
         class="h-11 md:h-14 px-2 text-sm md:text-base rounded-full border bg-white border-zinc-500 text-zinc-800 hover:bg-zinc-500 hover:text-white transition-all duration-300"

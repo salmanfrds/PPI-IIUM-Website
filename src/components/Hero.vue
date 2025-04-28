@@ -42,7 +42,7 @@ export default {
   <section
     :style="`background-image: url(${currentBg})`"
     class="min-h-[70vh]  bg-cover bg-center xl:min-h-screen flex flex-col justify-center items-center text-zinc-800 overflow-hidden pt-6 relative">
-    <div class="absolute inset-0 bg-zinc-200/75 backdrop-brightness-100 z-0"></div>
+    <div class="absolute inset-0 bg-zinc-100/80 backdrop-brightness-110 z-0"></div>
     <!-- Background decorative elements -->
     <div
       class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-zinc-300/30 to-transparent rounded-full blur-3xl -z-10 transform translate-x-1/2 -translate-y-1/2">
@@ -63,7 +63,7 @@ export default {
         <!-- Headings -->
         <div class="space-y-2 text-center lg:text-left">
           <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-            <span class="text-black">PPI IIUM.</span>
+            <span class="text-black">PPI IIUM </span>
             <span class="text-zinc-600 font-normal">2024/2025</span>
           </h1>
           <h2 class="text-2xl md:text-3xl lg:text-4xl text-zinc-600 font-medium">Kabinet Rangkasa</h2>

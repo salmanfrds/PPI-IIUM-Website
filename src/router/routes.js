@@ -1,19 +1,20 @@
 // router/routes.js
-import App from '@/views/HomeLanding.vue';
-import PpiIium from '@/views/PPI-IIUM.vue';
-import PenaKita from '@/views/Pena-Kita.vue';
-import AcademicCorner from '@/views/AcademicCorner.vue';
-import Kontak from '@/views/Kontak.vue';
-import All from '@/components/All-Article.vue'
-import Login from '@/views/Login.vue';
-import Submit from '@/views/Submit.vue';
-import Dashboard from '@/views/Dashboard.vue';
-import Article from '@/views/Article.vue';
-import PenaKastrat from '@/components/Pena-Kastrat.vue';
-import Seboga from '@/components/Seboga.vue';
-import RuangCerita from '@/components/Ruang-Cerita.vue';
-import Edit from '@/views/Edit.vue';
-import Litbang from '@/components/Litbang.vue';
+import App from '../views/HomeLanding.vue';
+import PpiIium from '../views/PPI-IIUM.vue';
+import PenaKita from '../views/Pena-Kita.vue';
+import AcademicCorner from '../views/AcademicCorner.vue';
+import Kontak from '../views/Kontak.vue';
+import All from '../components/All-Article.vue'
+import Login from '../views/Login.vue';
+import Submit from '../views/Submit.vue';
+import Dashboard from '../views/Dashboard.vue';
+import Article from '../views/Article.vue';
+import PenaKastrat from '../components/Pena-Kastrat.vue';
+import Seboga from '../components/Seboga.vue';
+import RuangCerita from '../components/Ruang-Cerita.vue';
+import Edit from '../views/Edit.vue';
+import Litbang from '../components/Litbang.vue';
+import liputanKhusus from '../components/liputan-khusus.vue';
 
 const routes = [
   {
@@ -57,6 +58,11 @@ const routes = [
         name: 'Litbang',
         component: Litbang,
       },
+      {
+        path: 'liputan-khusus', // This creates /pena-kita/all
+        name: 'LiputanKhusus',
+        component: liputanKhusus,
+      }
     ],
   },
   {
