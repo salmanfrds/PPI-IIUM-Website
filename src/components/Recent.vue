@@ -4,7 +4,7 @@
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-zinc-600 to-zinc-500">Terbaru<br></span>
             <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-zinc-600 to-zinc-500 rounded-full"></div>
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 px-12 md:px-8 gap-8 mt-2 md:mt-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 px-8 gap-8 mt-2 md:mt-6">
             <div data-aos="fade-down" v-for="(article, index) in articles" :key="index"
                 class="bg-white border border-zinc-200 text-zinc-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
                 <router-link :to="`/article/${article._id}`" class="min-h-14 flex items-center justify-center">
