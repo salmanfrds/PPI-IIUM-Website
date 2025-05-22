@@ -7,8 +7,8 @@
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 px-12 md:px-8 gap-8 mt-2 md:mt-6">
             <div data-aos="fade-down" v-for="(article, index) in articles" :key="index"
                 class="bg-white border border-zinc-200 text-zinc-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
-                <router-link :to="`/article/${article._id}`">
-                  <h2 class="text-base md:text-xl text-center font-bold text-gray-800 hover:text-gray-600 transition-all duration-300 p-2">
+                <router-link :to="`/article/${article._id}`" class="min-h-14 flex items-center justify-center">
+                  <h2 class="text-base md:text-lg text-center font-bold text-gray-800 hover:text-gray-600 transition-all duration-300 p-2">
                       {{ article.title }}
                   </h2>
                 </router-link>
@@ -21,14 +21,11 @@
                     <p class="text-gray-500">{{ new Date(article.createdAt).toLocaleDateString() }}</p>
                 </div>
                 <img :src="`https://server.salmanfrds.com${article.imagePath}`" class="aspect-[4/3] object-cover rounded-sm px-2" alt="image">
-                <div class="flex flex-col justify-between gap-2">
-                    <p class="px-4 py-2 text-justify text-xs md:text-sm">{{ article.synopsis }}</p>
-                    <router-link :to="`/article/${article._id}`" class="w-full">
-                      <p class="border-t text-center py-2 w-1/3 mx-auto">
-                          see more
-                      </p>
-                    </router-link>
-                </div>
+                <router-link :to="`/article/${article._id}`" class="w-full mt-4">
+                  <p class="border-t text-center py-2 w-1/3 mx-auto hover:text-gray-500 transition-colors duration-200">
+                      see more
+                  </p>
+                </router-link>
             </div>
         </div>
     </section>

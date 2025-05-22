@@ -3,18 +3,20 @@ import university from "@/assets/university.png";
 import irkhs from "../assets/irkhs.jpg";
 import kict from "../assets/kict.jpg";
 import celpad from "../assets/celpad.jpg";
+import kaed from "../assets/kaed.jpg";
 
 export default {
   data() {
     return {
       faculties: [
-        { name: "Kulliyyah of Education", link: "https://www.youtube.com/@OfficialIIUM", image: university },
-        { name: "Kulliyyah of Architecture & Environmental Design", link: "https://www.youtube.com/@OfficialIIUM", image: university },
-        { name: "Ahmad Ibrahim Kulliyyah of Laws", link: "https://www.youtube.com/@OfficialIIUM", image: university },
-        { name: "Kulliyyah of Islamic Reveal Knowledge & Human Sciences", link: "https://www.youtube.com/@OfficialIIUM", image: irkhs },
-        { name: "Kulliyyah of Engineering", link: "https://www.youtube.com/@OfficialIIUM", image: university },
-        { name: "Kulliyyah of Economics & Management Sciences", link: "https://www.youtube.com/@OfficialIIUM", image: university },
-        { name: "Kulliyyah of Information & Communication Technology", link: "https://www.youtube.com/@OfficialIIUM", image: kict },
+        { name: "Kulliyyah of Education", link: "https://drive.google.com/drive/folders/1AVfxnOUptJS-LRZwwIhusCTjJFpP4-ax", image: university },
+        { name: "Kulliyyah of Architecture & Environmental Design", link: "https://drive.google.com/drive/folders/1ogsv6w89tIYSeDYChvgxLsCYITlJu-gK", image: kaed },
+        { name: "Ahmad Ibrahim Kulliyyah of Laws", link: "https://drive.google.com/drive/folders/1zi5WA1xanGT65GMhE8FsweRdjV4wjlnp", image: university },
+        { name: "Kulliyyah of Islamic Reveal Knowledge", link: "https://drive.google.com/drive/folders/1zi5WA1xanGT65GMhE8FsweRdjV4wjlnp", image: irkhs },
+        { name: "Kulliyyah of Human Science", link: "https://drive.google.com/drive/folders/1BB5vC9SoEzhIMBtSEOnzjSBrlaIGMsfw", image: irkhs },
+        { name: "Kulliyyah of Engineering", link: "https://drive.google.com/drive/folders/1mEzbwDa9v76l5D9Z6MaGm_r1mAMEKh9j", image: university },
+        { name: "Kulliyyah of Economics & Management Sciences", link: "https://drive.google.com/drive/folders/1pjF44cZOtPWnkTG_MH2rnf8t-8t9rOba", image: university },
+        { name: "Kulliyyah of Information & Communication Technology", link: "https://drive.google.com/drive/folders/1kJK9YkGLGqvw-IRCQcYSM_3ZX79-KPkU", image: kict },
         { name: "Centre for Languages & Pre-University Academic Development", link: "https://www.youtube.com/@OfficialIIUM", image: celpad }
       ]
     };

@@ -40,6 +40,7 @@ export default {
 
 <template>
   <section
+    aria-label="Kabinet Rangkasa PPI-IIUM"
     :style="`background-image: url(${currentBg})`"
     class="min-h-[70vh]  bg-cover bg-center xl:min-h-screen flex flex-col justify-center items-center text-zinc-800 overflow-hidden pt-6 relative">
     <div class="absolute inset-0 bg-zinc-100/80 backdrop-brightness-110 z-0"></div>
@@ -50,7 +51,6 @@ export default {
     <div
       class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-zinc-300/20 to-transparent rounded-full blur-3xl -z-10 transform -translate-x-1/3 translate-y-1/3">
     </div>
-
     <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 px-4 md:px-8 lg:px-12 py-12 md:py-16">
       <!-- Content column -->
       <div class="flex flex-col gap-4 justify-center" data-aos="fade-right" data-aos-duration="1000">
@@ -111,6 +111,7 @@ export default {
         <img :src="Kabinet" alt="Kabinet Rangkasa PPI IIUM"
           class="mb-4 rounded-2xl shadow-xl relative z-10 w-full max-w-lg lg:max-w-none object-cover transition-all duration-700 hover:shadow-2xl"
           loading="lazy" />
+
         <!-- Optional floating element -->
         <div class="absolute bottom-8 left-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-lg z-20">
           <p class="font-medium">Pelantikan Kabinet</p>
