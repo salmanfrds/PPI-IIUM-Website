@@ -91,31 +91,31 @@
                     <p class="text-gray-600">Share this article:</p>
                     <div class="flex space-x-4 mt-2">
                         <!-- Facebook -->
-                        <a :href="`https://www.facebook.com/sharer/sharer.php?u=https://ppiiium.salmanfrds.com/article/${article._id}`"
+                        <a :href="`https://www.facebook.com/sharer/sharer.php?u=https://ppiiium.com/article/${article._id}`"
                             target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 text-xl">
                             <i class="fab fa-facebook"></i>
                         </a>
 
                         <!-- X / Twitter -->
-                        <a :href="`https://twitter.com/intent/tweet?url=https://ppiiium.salmanfrds.com/article/${article._id}&text=Check out this article!`"
+                        <a :href="`https://twitter.com/intent/tweet?url=https://ppiiium.com/article/${article._id}&text=Check out this article!`"
                             target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-600 text-xl">
                             <i class="fab fa-twitter"></i>
                         </a>
 
                         <!-- LinkedIn -->
-                        <a :href="`https://www.linkedin.com/sharing/share-offsite/?url=https://ppiiium.salmanfrds.com/article/${article._id}`"
+                        <a :href="`https://www.linkedin.com/sharing/share-offsite/?url=https://ppiiium.com/article/${article._id}`"
                             target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:text-blue-900 text-xl">
                             <i class="fab fa-linkedin"></i>
                         </a>
 
                         <!-- Telegram -->
-                        <a :href="`https://t.me/share/url?url=https://ppiiium.salmanfrds.com/article/${article._id}&text=Check out this article!`"
+                        <a :href="`https://t.me/share/url?url=https://ppiiium.com/article/${article._id}&text=Check out this article!`"
                             target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:text-sky-700 text-xl">
                             <i class="fab fa-telegram"></i>
                         </a>
 
                         <!-- WhatsApp -->
-                        <a :href="`https://api.whatsapp.com/send?text=Check out this article! https://ppiiium.salmanfrds.com/article/${article._id}`"
+                        <a :href="`https://api.whatsapp.com/send?text=Check out this article! https://ppiiium.com/article/${article._id}`"
                             target="_blank" rel="noopener noreferrer"
                             class="text-green-500 hover:text-green-700 text-xl">
                             <i class="fab fa-whatsapp"></i>
