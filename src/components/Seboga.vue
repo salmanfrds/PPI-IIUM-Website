@@ -32,7 +32,7 @@
             </div>
 
             <div class="flex-grow px-4 py-3">
-              <p class="text-gray-600 text-sm leading-relaxed line-clamp-3">{{ article.synopsis }}</p>
+              <p class="text-gray-600 text-sm leading-relaxed line-clamp-4 md:line-clamp-3">{{ article.synopsis }}</p>
             </div>
 
             <router-link :to="`/article/${article._id}`" class="mt-auto mb-2">
