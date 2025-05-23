@@ -20,7 +20,7 @@
                     </div>
                     <p class="text-gray-500">{{ new Date(article.createdAt).toLocaleDateString() }}</p>
                 </div>
-                <img :src="`https://server.salmanfrds.com${article.imagePath}`" class="aspect-[4/3] object-cover rounded-sm px-2" alt="image">
+                <img v-if="article.imagePath" :src="`https://server.salmanfrds.com${article.imagePath}`" class="aspect-[4/3] object-cover rounded-sm px-2" alt="image">
                 <router-link :to="`/article/${article._id}`" class="w-full mt-4">
                   <p class="border-t text-center py-2 w-1/3 mx-auto hover:text-gray-500 transition-colors duration-200">
                       see more
