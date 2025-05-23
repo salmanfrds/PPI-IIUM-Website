@@ -24,7 +24,7 @@
                 <span class="font-medium">{{ article.author }}</span>
                 <span class="bg-gray-100 px-2 py-1 rounded-full">{{ article.category }}</span>
               </div>
-              <div class="flex items-center gap-2">
+              <div class="flex items-center gap-1">
                 <i class="fa-regular fa-clock text-gray-500"></i>
                 <p class="text-gray-500">{{ new Date(article.createdAt).toLocaleDateString() }}</p>
               </div>
