@@ -115,7 +115,7 @@ export default {
         <!-- Optional floating element -->
         <div class="absolute bottom-8 left-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-lg z-20">
           <p class="font-medium">Pelantikan Kabinet</p>
-          <p class="text-sm text-zinc-600">Juni 2024</p>
+          <p class="text-sm text-zinc-600">1 Januari 2024</p>
         </div>
       </div>
     </div>

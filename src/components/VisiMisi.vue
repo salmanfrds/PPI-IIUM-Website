@@ -17,17 +17,17 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:px-12" data-aos="fade-up">
         
         <!-- Visi -->
-        <div class="bg-white border border-zinc-200 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 col-span-1">
+        <div class="bg-white border border-zinc-200 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 px-6 py-8 col-span-1">
           <h4 class="text-2xl font-bold text-zinc-700 mb-4 border-b pb-2">
             VISI
           </h4>
-          <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+          <p class="text-base md:text-lg text-gray-700 leading-relaxed mx-auto my-auto">
             {{ visiContent || 'Visi belum ditentukan.' }}
           </p>
         </div>
 
         <!-- Misi -->
-        <div class="bg-white border border-zinc-200 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 md:col-span-2" data-aos="fade-up" data-aos-delay="100">
+        <div class="bg-white border border-zinc-200 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 px-6 py-8 md:col-span-2" data-aos="fade-up" data-aos-delay="100">
           <h4 class="text-2xl font-bold text-zinc-700 mb-4 border-b pb-2">
             MISI
           </h4>

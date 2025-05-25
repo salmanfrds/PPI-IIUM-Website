@@ -44,7 +44,7 @@
           </div>
           <!-- Small image on the right side -->
           <div class="p-2 items-center hidden md:flex">
-            <img :src="`https://server.salmanfrds.com${article.imagePath}`"
+            <img :src="article.imagePath ? `https://server.salmanfrds.com${article.imagePath}` : '/src/assets/ppiiium-logo.png'"
               class="aspect-square object-cover rounded-md" alt="article thumbnail">
           </div>
         </div>
