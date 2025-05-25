@@ -21,7 +21,7 @@
                     <p class="text-gray-500">{{ new Date(article.createdAt).toLocaleDateString() }}</p>
                 </div>
                 <img 
-                  :src="article.imagePath ? `https://server.salmanfrds.com${article.imagePath}` : '/src/assets/ppiiium-logo.png'" 
+                  :src="article.imagePath ? `https://server.salmanfrds.com${article.imagePath}` : 'https://ppiiium.com/assets/ppiiium-logo-DD4ICE5q.png'" 
                   class="aspect-[4/3] object-cover rounded-sm px-2" 
                   alt="Article image"
                 >
