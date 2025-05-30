@@ -11,7 +11,7 @@
         <a href="https://wa.me/60134298449"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
     </div>
     <nav class="grid grid-cols-2 lg:grid-cols-4 p-4 gap-2 text-center md:w-2/5 mx-auto">
-        <router-link to="/ppi-iium" class="hover:text-zinc-400 transition-color duration-200">About Us</router-link>
+        <router-link to="/tentang-kami" class="hover:text-zinc-400 transition-color duration-200">About Us</router-link>
         <router-link to="/kontak" class="hover:text-zinc-400 transition-color duration-200">Kontak</router-link> 
         <router-link to="/pena-kita" class="hover:text-zinc-400 transition-color duration-200">Pena Kita</router-link>
         <router-link to="/academic-corner" class="hover:text-zinc-400 transition-color duration-200">Academic</router-link>

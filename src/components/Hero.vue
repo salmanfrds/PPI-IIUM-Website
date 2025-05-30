@@ -81,7 +81,7 @@ export default {
             Kontak
             <i class="fa-solid fa-arrow-right-long text-sm"></i>
           </router-link>
-          <router-link to="/ppi-iium"
+          <router-link to="/tentang-kami"
             class="text-white bg-zinc-900 py-3 px-6 rounded-full shadow-md hover:shadow-xl inline-flex items-center gap-2 font-medium transition-all duration-300 hover:-translate-y-1">
             Tentang Kami
             <i class="fa-solid fa-users text-sm"></i>
@@ -91,7 +91,7 @@ export default {
         <!-- Optional social proof or statistics -->
         <div class="flex gap-8 justify-center lg:justify-start mt-2 pt-4 border-t border-zinc-800">
           <div class="text-center">
-            <p class="text-3xl font-bold">500+</p>
+            <p class="text-3xl font-bold">300+</p>
             <p class="text-sm text-zinc-600">Anggota</p>
           </div>
           <div class="text-center">

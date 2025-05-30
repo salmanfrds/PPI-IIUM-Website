@@ -23,7 +23,7 @@ const routes = [
     component: App,
   },
   {
-    path: '/ppi-iium',
+    path: '/tentang-kami',
     name: 'PpiIium',
     component: PpiIium,
   },

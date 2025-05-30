@@ -36,7 +36,7 @@
     <div
       class="text-gray-800 text-3xl md:text-4xl font-extrabold text-center w-full md:w-3/4 lg:mt-4 mx-auto"
     >
-      Tentang PPI-IIUM
+      Tentang PPI IIUM
     </div>
 
     <!-- Divider -->

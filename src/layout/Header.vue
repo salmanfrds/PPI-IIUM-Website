@@ -17,7 +17,7 @@
 
   const leftNavItems = [
      {title: 'PPI-IIUM', path: '/' },
-     {title: 'About Us', path: '/ppi-iium' },
+     {title: 'About Us', path: '/tentang-kami' },
      {title: 'Kontak',   path: '/kontak' }
   ];
   

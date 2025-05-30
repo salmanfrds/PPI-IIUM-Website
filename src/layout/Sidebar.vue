@@ -36,7 +36,7 @@ const sidebarClasses = computed(() =>
                     </router-link>
                 </li>
                 <li class="group">
-                    <router-link to="/ppi-iium" @click="$emit('close')"
+                    <router-link to="/tentang-kami" @click="$emit('close')"
                         class="flex items-center p-3 rounded-lg transition-all duration-300 hover:pl-5">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
