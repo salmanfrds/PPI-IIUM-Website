@@ -1,6 +1,7 @@
 <script>
     import AOS from 'aos'; 
     import 'aos/dist/aos.css';// ✅ You need this
+    import guidebook from '../assets/guidebook.pdf';
 
     export default{
         mounted(){
@@ -40,6 +41,25 @@
         </div>
         <div class="p-4 text-center">
           <p class="font-semibold text-gray-700">SOP Visitasi PPI IIUM</p>
+        </div>
+      </a>
+
+      <!-- Guidebook PPI-IIUM -->
+      <a
+        href="https://ppiiium.com/guidebook.pdf"
+        target="_blank"
+        class="group block w-full md:w-[45%] max-w-md bg-white border border-zinc-200 rounded-lg shadow-md hover:shadow-2xl transition-shadow duration-300 overflow-hidden"
+      >
+        <div class="relative overflow-hidden h-[50vh]">
+          <img
+            src='../assets/guidebook.jpg'
+            alt="Guidebook PPI-IIUM 2025"
+            class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+          />
+          <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+        </div>
+        <div class="p-4 text-center">
+          <p class="font-semibold text-gray-700">Guidebook PPI IIUM</p>
         </div>
       </a>
     </div>
