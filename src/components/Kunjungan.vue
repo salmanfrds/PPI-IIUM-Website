@@ -46,7 +46,7 @@
 
       <!-- Guidebook PPI-IIUM -->
       <a
-        href="https://ppiiium.com/guidebook.pdf"
+        href="https://drive.google.com/file/d/1CwfXUyYdWe6eMCJ6-IZuUf0CHsX_itKl/view?usp=sharing"
         target="_blank"
         class="group block w-full md:w-[45%] max-w-md bg-white border border-zinc-200 rounded-lg shadow-md hover:shadow-2xl transition-shadow duration-300 overflow-hidden"
       >
