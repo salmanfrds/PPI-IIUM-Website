@@ -6,7 +6,9 @@ import Kabinet from "../assets/Kabinet-Rangkasa.jpg";
 import bg from "../assets/iium-copy.jpg"
 import bgMobile from "../assets/iium-mobile-copy.jpg";
 import Interim from "../assets/Interim.jpg"
-import Kerja from "../assets/Rapat-Kerja.jpg"
+import Kerja from "../assets/Rapat-kerja.jpg"
+
+// updated by comments
 
 const gallery = ref([
     {
