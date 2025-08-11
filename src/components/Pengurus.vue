@@ -7,7 +7,15 @@
     import LITBANG from "@/assets/litbang.jpg";
     import MEDIFO from "@/assets/medifo.jpg";
     import PND from "@/assets/pnd.jpg";
-    import 'aos/dist/aos.css';
+    import AOS from 'aos'; 
+    import { onMounted } from 'vue';
+
+    onMounted(()=>{
+      AOS.init({
+        duration: 300,
+        once: true
+      });
+    })
 
     const pengurus = [
       { name: "BPH", image: BPH, link: "https://www.instagram.com/p/DEwcL_XS77K/?igsh=anRvMnFwY3Q5cDV0" },

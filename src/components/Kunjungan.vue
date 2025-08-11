@@ -1,16 +1,13 @@
-<script>
-    import AOS from 'aos'; 
-    import 'aos/dist/aos.css';// ✅ You need this
-    import guidebook from '../assets/guidebook.pdf';
+<script setup>
+import AOS from 'aos'; 
+import { onMounted } from 'vue';
 
-    export default{
-        mounted(){
-          AOS.init({
-            duration: 300,
-            once: true
-          });
-        }
-    };
+onMounted(()=>{
+  AOS.init({
+    duration: 300,
+    once: true
+  });
+})
 </script>
 <template>
   <section class="bg-gradient-to-br from-zinc-200 via-white to-zinc-50 flex flex-col items-center justify-center min-h-[50vh] md:min-h-screen pt-24 md:pt-20  pb-8 gap-12 px-4">
@@ -79,4 +76,3 @@
     </div>
   </section>
 </template>
-  

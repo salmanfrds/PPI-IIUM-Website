@@ -1,3 +1,52 @@
+<script setup>
+import { ref, onMounted, computed, watchEffect } from "vue";
+import { useRoute } from "vue-router";
+import Quill from "quill";
+
+// State
+const route = useRoute();
+const article = ref(null);
+const loading = ref(true);
+const errorMessage = ref("");
+const quillContainer = ref(null); // Template ref for Quill container
+
+// Fetch article on component mount
+onMounted(async () => {
+    try {
+        const response = await fetch(`https://server.salmanfrds.com/api/article/${route.params.id}`);
+        if (!response.ok) throw new Error("Failed to fetch article");
+        article.value = await response.json();
+    } catch (error) {
+        errorMessage.value = error.message;
+    } finally {
+        loading.value = false;
+    }
+});
+
+// Computed property for formatted date
+const formattedDate = computed(() => {
+    return article.value ? new Date(article.value.createdAt).toLocaleDateString() : "";
+});
+
+// Watch for article changes and initialize Quill
+watchEffect(() => {
+    if (article.value && quillContainer.value) {
+        try {
+            const quill = new Quill(quillContainer.value, {
+                theme: "snow",
+                readOnly: true,
+                modules: { toolbar: false },
+            });
+            const parsedDetails = JSON.parse(article.value.details);
+            quill.setContents(parsedDetails);
+        } catch (error) {
+            console.error("Error initializing Quill or parsing content:", error);
+            // You might want to set an error message here as well
+        }
+    }
+});
+</script>
+
 <template>
     <section class="py-16 container mx-auto bg-gradient-to-b from-white to-zinc-100 mt-8">
         <!-- Loading State -->
@@ -91,31 +140,31 @@
                     <p class="text-gray-600">Share this article:</p>
                     <div class="flex space-x-4 mt-2">
                         <!-- Facebook -->
-                        <a :href="`https://www.facebook.com/sharer/sharer.php?u=https://ppiiium.com/article/${article._id}`"
+                        <a :href="`https://www.facebook.com/sharer/sharer.php?u=https://ppiiium.com/article/${article._id}&quote=${encodeURIComponent(`${article.title}, cek artikel terbaru kami`)}`"
                             target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 text-xl">
                             <i class="fab fa-facebook"></i>
                         </a>
 
                         <!-- X / Twitter -->
-                        <a :href="`https://twitter.com/intent/tweet?url=https://ppiiium.com/article/${article._id}&text=Check out this article!`"
+                        <a :href="`https://twitter.com/intent/tweet?url=https://ppiiium.com/article/${article._id}&text=${encodeURIComponent(`${article.title}, cek artikel terbaru kami`)}`"
                             target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-600 text-xl">
                             <i class="fab fa-twitter"></i>
                         </a>
 
                         <!-- LinkedIn -->
-                        <a :href="`https://www.linkedin.com/sharing/share-offsite/?url=https://ppiiium.com/article/${article._id}`"
+                        <a :href="`https://www.linkedin.com/sharing/share-offsite/?url=https://ppiiium.com/article/${article._id}&title=${encodeURIComponent(`${article.title}, cek artikel terbaru kami`)}`"
                             target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:text-blue-900 text-xl">
                             <i class="fab fa-linkedin"></i>
                         </a>
 
                         <!-- Telegram -->
-                        <a :href="`https://t.me/share/url?url=https://ppiiium.com/article/${article._id}&text=Check out this article!`"
+                        <a :href="`https://t.me/share/url?url=https://ppiiium.com/article/${article._id}&text=${article.title}, cek artikel terbaru kami`"
                             target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:text-sky-700 text-xl">
                             <i class="fab fa-telegram"></i>
                         </a>
 
                         <!-- WhatsApp -->
-                        <a :href="`https://api.whatsapp.com/send?text=Check out this article! https://ppiiium.com/article/${article._id}`"
+                        <a :href="`https://api.whatsapp.com/send?text=${article.title}, cek artikel terbaru kami di https://ppiiium.com/article/${article._id}`"
                             target="_blank" rel="noopener noreferrer"
                             class="text-green-500 hover:text-green-700 text-xl">
                             <i class="fab fa-whatsapp"></i>
@@ -124,7 +173,7 @@
 
                 </div>
 
-                <router-link to="/pena-kita/all"
+                <router-link to="/pena-kita/"
                     class="flex items-center text-indigo-600 hover:text-indigo-800 transition-colors font-medium">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -139,7 +188,7 @@
     </section>
 </template>
 
-<script>
+<!-- <script>
 import { ref, onMounted, computed } from "vue";
 import { useRoute } from "vue-router";
 import Quill from "quill"; // Import Quill
@@ -201,4 +250,4 @@ export default {
         };
     },
 };
-</script>
+</script> -->

@@ -1,4 +1,14 @@
-<script></script>
+<script setup>
+import AOS from 'aos'; 
+import { onMounted } from 'vue';
+
+onMounted(()=>{
+  AOS.init({
+    duration: 300,
+    once: true
+  });
+})
+</script>
 
 <template>
     <section

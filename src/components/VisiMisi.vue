@@ -1,3 +1,22 @@
+<script setup>
+import AOS from 'aos'; 
+import { onMounted } from 'vue';
+
+onMounted(()=>{
+  AOS.init({
+    duration: 300,
+    once: true
+  });
+})
+
+const visiContent = `Menjadikan PPI IIUM sebagai wadah pengembangan potensi pelajar Indonesia yang aktif dan kolaboratif dalam bidang pendidikan dan keorganisasian.`
+const misiContent = [
+  'Menyelenggarakan program Pendidikan yang berfokus pada pengembangan keterampilan akademik dan kepemimpinan bagi pelajar Indonesia di IIUM.',
+  'Membangun jaringan kolaborasi antara pelajar, alumni, dan organisasipendukung lainnya untuk meningkatkan dukungan akademik dan professional.',
+  'Mengembangkan platfrom komunikasi yang efektif untuk mempererat hubungan antar warga PPI IIUM serta memfasilitasi penyampaian informasi dan ide.'
+];
+</script>
+
 <template>
   <section class="bg-gradient-to-br from-zinc-100 via-zinc-200 to-zinc-300 py-20 min-h-[50vh] lg:min-h-screen flex items-center">
     <div class="container mx-auto px-4">
@@ -40,28 +59,3 @@
     </div>
   </section>
 </template>
-
-
-<script>
-import AOS from 'aos'; // ✅ You need this
-import 'aos/dist/aos.css';
-
-export default {
-    data() {
-        return {
-            visiContent: `Menjadikan PPI IIUM sebagai wadah pengembangan potensi pelajar Indonesia yang aktif dan kolaboratif dalam bidang pendidikan dan keorganisasian.`,
-            misiContent: [
-              'Menyelenggarakan program Pendidikan yang berfokus pada pengembangan keterampilan akademik dan kepemimpinan bagi pelajar Indonesia di IIUM.',
-              'Membangun jaringan kolaborasi antara pelajar, alumni, dan organisasipendukung lainnya untuk meningkatkan dukungan akademik dan professional.',
-              'Mengembangkan platfrom komunikasi yang efektif untuk mempererat hubungan antar warga PPI IIUM serta memfasilitasi penyampaian informasi dan ide.'
-            ]
-        };
-    },
-    mounted(){
-      AOS.init({
-        duration: 300,
-        once: true
-      });
-    }
-};
-</script>

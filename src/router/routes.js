@@ -31,10 +31,9 @@ const routes = [
     path: '/pena-kita',
     name: 'PenaKita',
     component: PenaKita,
-    redirect: '/pena-kita/all',
     children: [
       {
-        path: 'all', // This creates /pena-kita/all
+        path: '',
         name: 'PenaKitaAll',
         component: All,
       },

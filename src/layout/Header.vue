@@ -55,11 +55,16 @@
     </nav>
 
     <!-- Logo -->
-    <router-link to="/" class="block cursor-pointer lg:mx-auto" aria-label="PPIIIUM Homepage">
+    <router-link to="/" class="cursor-pointer lg:mx-auto flex gap-2" aria-label="PPIIIUM Homepage">
       <img 
         src="../assets/ppiiium-logo.png" 
         alt="PPIIIUM Logo" 
         class="h-12 xl:h-14 object-contain transition-transform duration-300 hover:scale-105"
+      >
+      <img 
+        src="../assets/merdeka.png" 
+        alt="80 Tahun Merdeka" 
+        class="h-12 xl:h-14 object-contain transition-transform duration-300 hover:scale-105 rounded-full"
       >
     </router-link>
 

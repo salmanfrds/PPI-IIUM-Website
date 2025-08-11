@@ -1,15 +1,13 @@
-<script>
-    import AOS from 'aos';
-    import 'aos/dist/aos.css';
+<script setup>
+import AOS from 'aos'; 
+import { onMounted } from 'vue';
 
-    export default {
-      mounted(){
-        AOS.init({
-          duration: 300,
-          once: true
-        });
-      }
-    };    
+onMounted(()=>{
+  AOS.init({
+    duration: 300,
+    once: true
+  });
+})
 </script>
 
 <template>

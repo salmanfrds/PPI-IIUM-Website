@@ -1,67 +1,83 @@
+<script setup>
+import AOS from 'aos'; 
+import {onMounted, ref} from 'vue';
+
+const articles = ref([])
+
+const fetchRecent = async () => {
+    try{
+        const res = await fetch("https://server.salmanfrds.com/api/recent");
+        articles.value = await res.json()
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+onMounted(() => {
+    AOS.init({
+      duration: 300,
+      once: true
+    });
+
+    fetchRecent(); 
+});
+
+</script>
+
 <template>
-    <section class="py-12 min-h-[50vh] xl:min-h-screen flex flex-col gap-8 bg-gradient-to-br from-zinc-100 via-zinc-200 to-zinc-300">
-        <h2 class="text-4xl relative font-bold text-center text-gray-800 mb-">
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-zinc-600 to-zinc-500">Terbaru<br></span>
-            <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-zinc-600 to-zinc-500 rounded-full"></div>
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 px-8 gap-8 mt-2 md:mt-6">
-            <div data-aos="fade-down" v-for="(article, index) in articles" :key="index"
-                class="bg-white border border-zinc-200 text-zinc-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
-                <router-link :to="`/article/${article._id}`" class="min-h-14 flex items-center justify-center">
-                  <h2 class="text-base md:text-lg text-center font-bold text-gray-800 hover:text-gray-600 transition-all duration-300 p-2">
-                      {{ article.title }}
-                  </h2>
-                </router-link>
-                <div class="flex justify-between items-center text-gray-700 text-sm px-4">
-                    <div class="flex gap-2 items-center">
-                        <i class="fa-solid fa-user fa-sm text-gray-800"></i>
-                        <span class="">{{ article.author }}</span>
-                        <span class="rounded-md">{{ article.category }}</span>
-                    </div>
-                    <p class="text-gray-500">{{ new Date(article.createdAt).toLocaleDateString() }}</p>
-                </div>
-                <img 
-                  :src="article.imagePath ? `https://server.salmanfrds.com${article.imagePath}` : 'https://ppiiium.com/assets/ppiiium-logo-DD4ICE5q.png'" 
-                  class="aspect-[4/3] object-cover rounded-sm px-2" 
-                  alt="Article image"
+    <section class="py-16 min-h-[50vh] md:px-12 xl:min-h-screen flex flex-col bg-gradient-to-br from-zinc-50 via-zinc-100 to-zinc-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-10 relative">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-zinc-700 to-zinc-500">Terbaru</span>
+                <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-zinc-600 to-zinc-400 rounded-full"></div>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-8">
+                <div 
+                    v-for="(article, index) in articles" 
+                    :key="index"
+                    data-aos="fade-up" 
+                    data-aos-delay="50" 
+                    class="bg-white border border-zinc-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group"
                 >
-                <router-link :to="`/article/${article._id}`" class="w-full mt-4">
-                  <p class="border-t text-center py-2 w-1/3 mx-auto hover:text-gray-500 transition-colors duration-200">
-                      see more
-                  </p>
-                </router-link>
+                    <img 
+                        :src="article.imagePath ? `https://server.salmanfrds.com${article.imagePath}` : 'https://ppiiium.com/assets/ppiiium-logo-DD4ICE5q.png'" 
+                        class="aspect-[16/9] object-cover w-full" 
+                        alt="Article image"
+                    >
+                    
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-center text-xs text-gray-500 mb-3">
+                            <div class="flex gap-2 items-center">
+                                <i class="fa-solid fa-user text-gray-600"></i>
+                                <span>{{ article.author }}</span>
+                            </div>
+                            <p>{{ new Date(article.createdAt).toLocaleDateString() }}</p>
+                        </div>
+                        
+                        <router-link :to="`/article/${article._id}`" class="mb-3">
+                            <h2 class="text-xl font-bold text-gray-800 hover:text-gray-600 transition-all duration-300 line-clamp-2">
+                                {{ article.title }}
+                            </h2>
+                        </router-link>
+                        
+                        <span class="px-3 py-1 bg-zinc-100 text-zinc-700 text-xs font-medium rounded-full w-fit mb-4">
+                            {{ article.category }}
+                        </span>
+                        
+                        <p class="text-gray-600 line-clamp-3 mb-4 flex-grow">
+                            {{ article.synopsis }}
+                        </p>
+                        
+                        <router-link 
+                            :to="`/article/${article._id}`" 
+                            class="mt-auto text-center py-2 border-t border-zinc-100 text-zinc-600 font-medium hover:text-zinc-800 transition-colors duration-200 group-hover:text-zinc-800"
+                        >
+                            Read More →
+                        </router-link>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 </template>
-
-<script>
-    import AOS from 'aos';
-    import 'aos/dist/aos.css';
-
-    export default {
-        name: "AppPosts",
-        data() {
-            return {
-                articles: [],
-            };
-        },
-        mounted() {
-            this.fetchArticles();
-            AOS.init({
-              duration: 300,
-              once: true
-            });
-        },
-        methods: {
-            fetchArticles() {
-                fetch("https://server.salmanfrds.com/api/recent") // Use your backend endpoint
-                    .then((response) => response.json())
-                    .then((articles) => {
-                        this.articles = articles.reverse(); // Save articles in the component's state
-                    })
-                    .catch((error) => console.error("Error fetching articles:", error));
-            },
-        },
-    };
-</script>

@@ -1,11 +1,64 @@
-<script setup></script>
+<script setup>
+import { onMounted, ref, computed } from 'vue';
+
+const allArticles = ref([]); // Store all articles here
+const start = ref(0);
+const end = ref(4);
+const currPage = ref(1);
+
+// Use a computed property to get the articles for the current page
+const articles = computed(() => {
+  return allArticles.value.slice(start.value, end.value);
+});
+
+const fetchAllArticles = async () => {
+  try {
+    const res = await fetch("https://server.salmanfrds.com/api/articles/liputan-khusus");
+    const data = await res.json();
+    allArticles.value = data.reverse();
+  } catch (err) {
+    console.log(err)
+  }
+};
+
+const nextPage = () => {
+  // Check if we can move to the next page before updating start/end
+  if (end.value < allArticles.value.length) {
+    start.value += 4;
+    end.value += 4;
+    currPage.value += 1;
+    toTop();
+  }
+};
+
+const prevPage = () => {
+  if (start.value > 0) {
+    start.value -= 4;
+    end.value -= 4;
+    currPage.value -= 1;
+    toTop();
+  }
+};
+
+const toTop = () => {
+  window.scrollTo({
+    top: 0
+  });
+}
+
+onMounted(() => {
+  fetchAllArticles();
+});
+</script>
 
 <template>
-  <section class="flex flex-col gap-8 mt-2">
+  <section class="flex flex-col gap-8">
     <h2 class="text-4xl relative font-bold text-center text-gray-800 mb-">
       <span class="bg-clip-text text-transparent bg-gradient-to-r from-zinc-600 to-zinc-500">Pena Kita<br></span>
       <span class="text-xl md:text-2xl text-gray-600">Liputan Khusus</span>
-      <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-zinc-600 to-zinc-500 rounded-full"></div>
+      <div
+        class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-zinc-600 to-zinc-500 rounded-full">
+      </div>
     </h2>
     <div class="grid grid-cols-1 gap-4 mx-auto px-6 md:px-12" id="articles">
       <div v-for="(article, index) in articles" :key="index"
@@ -45,16 +98,35 @@
           </div>
           <!-- Small image on the right side -->
           <div class="p-2 items-center hidden md:flex">
-            <img :src="article.imagePath ? `https://server.salmanfrds.com${article.imagePath}` : 'https://ppiiium.com/assets/ppiiium-logo-DD4ICE5q.png'"
+            <img
+              :src="article.imagePath ? `https://server.salmanfrds.com${article.imagePath}` : 'https://ppiiium.com/assets/ppiiium-logo-DD4ICE5q.png'"
               class="aspect-square object-cover rounded-md" alt="article thumbnail">
           </div>
         </div>
       </div>
     </div>
+    <div class="flex justify-center gap-4 mt-6">
+      <button @click="prevPage"
+        class="min-w-24 px-auto py-2 flex items-center justify-center gap-2 bg-gradient-to-r from-zinc-600 to-zinc-500 text-white rounded-lg shadow hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        :disabled="start === 0">
+        <i class="fa-solid fa-chevron-left text-xs"></i>
+        <span>Previous</span>
+      </button>
+      <div
+        class=" bg-gradient-to-r from-zinc-600 to-zinc-500 text-white rounded-full shadow h-8 w-8 my-auto flex items-center justify-center">
+        <p>{{ currPage }}</p>
+      </div>
+      <button @click="nextPage"
+        class="min-w-24 px-auto py-2 flex items-center justify-center gap-2 bg-gradient-to-r from-zinc-600 to-zinc-500 text-white rounded-lg shadow hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        :disabled="end >= allArticles.length">
+        <span>Next</span>
+        <i class="fa-solid fa-chevron-right text-xs"></i>
+      </button>
+    </div>
   </section>
 </template>
 
-<script>
+<!-- <script>
     export default {
       name: "AppPosts",
       data() {
@@ -78,4 +150,4 @@
     ,
       },
     };
-</script>
+</script> -->
