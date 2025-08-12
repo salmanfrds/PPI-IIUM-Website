@@ -9,7 +9,7 @@
 
 <template>
   <section>
-    <Merdeka />
+    <Hero />
     <BannerMerdeka />
     <Kunjungan />
     <Recent />

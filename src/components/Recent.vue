@@ -25,7 +25,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <section class="py-16 min-h-[50vh] md:px-12 xl:min-h-screen flex flex-col bg-gradient-to-br from-zinc-50 via-zinc-100 to-zinc-200">
+    <section class="py-16 min-h-[50vh] md:px-12 xl:min-h-screen flex flex-col bg-gradient-to-br from-zinc-100 via-zinc-200 to-zinc-300">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-10 relative">
                 <span class="bg-clip-text text-transparent bg-gradient-to-r from-zinc-700 to-zinc-500">Terbaru</span>

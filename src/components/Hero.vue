@@ -87,7 +87,7 @@ onUnmounted(() => {
 
         <!-- Headings -->
         <div class="space-y-2 text-center lg:text-left">
-          <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">
+          <h1 class="text-3xl lg:text-4xl font-bold tracking-tight">
             <span class="text-black">PPI IIUM </span>
             <span class="text-zinc-600 font-normal">2024/2025</span>
           </h1>
@@ -142,17 +142,17 @@ onUnmounted(() => {
           loading="lazy" />
 
         <!-- Optional floating element -->
-        <div class="absolute bottom-8 left-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-lg z-20">
+        <div class="absolute bottom-2 md:bottom-8 -left-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-lg z-20">
           <p class="font-medium"> {{activeGallery.title}}</p>
           <p class="text-sm text-zinc-600">{{activeGallery.tanggal}}</p>
         </div>
 
-        <div class="absolute top-4 right-4 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full shadow-md z-20">
+        <div class="absolute top-4 right-2 md:right-16 lg:-right-2 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full shadow-md z-20">
           <p class="text-sm text-zinc-600 font-medium">{{ activeGalleryIndex + 1 }} / {{ gallery.length }}</p>
         </div>
 
         <button
-          class="absolute bottom-12 right-2 bg-zinc-900 hover:bg-zinc-900 text-white w-12 h-12 rounded-full shadow-lg transition-all duration-300 z-20 hover:-translate-y-1"
+          class="absolute bottom-4 md:bottom-12 right-2 md:right-16 lg:-right-4 bg-zinc-900 hover:bg-zinc-900 text-white w-12 h-12 rounded-full shadow-lg transition-all duration-300 z-20 hover:-translate-y-1"
           @click="nextGallery" aria-label="Next gallery item">
           <i class="fa-solid fa-arrow-right text-sm"></i>
         </button>

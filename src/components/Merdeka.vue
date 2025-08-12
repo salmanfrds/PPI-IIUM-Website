@@ -89,7 +89,7 @@ onUnmounted(() => {
                 </div>
 
                 <div class="space-y-2 text-center lg:text-left">
-                    <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">
+                    <h1 class="text-3xl lg:text-4xl font-bold tracking-tight">
                         <span class="text-slate-900">PPI IIUM </span>
                         <span class="text-red-700 font-normal">2024/2025</span>
                     </h1>
@@ -140,17 +140,17 @@ onUnmounted(() => {
                     class="mb-4 rounded-2xl shadow-xl relative z-10 w-full max-w-lg lg:max-w-none object-cover transition-all duration-700 hover:shadow-2xl border-4 border-white"
                     loading="lazy" />
 
-                <div class="absolute bottom-8 left-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-lg z-20">
+                <div class="absolute bottom-2 md:bottom-8 -left-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-lg z-20">
                     <p class="font-bold text-red-700">{{ activeGallery.title }}</p>
                     <p class="text-sm text-slate-600">{{ activeGallery.tanggal }}</p>
                 </div>
 
-                <div class="absolute top-4 right-4 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full shadow-md z-20">
+                <div class="absolute top-4 right-2 md:right-16 lg:-right-2 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full shadow-md z-20">
                     <p class="text-sm text-red-700 font-medium">{{ activeGalleryIndex + 1 }} / {{ gallery.length }}</p>
                 </div>
 
                 <button
-                    class="absolute bottom-12 right-2 bg-red-600 hover:bg-red-700 text-white w-12 h-12 rounded-full shadow-lg transition-all duration-300 z-20 hover:-translate-y-1"
+                    class="absolute bottom-4 md:bottom-12 right-2 md:right-16 lg:-right-4 bg-red-600 hover:bg-red-700 text-white w-12 h-12 rounded-full shadow-lg transition-all duration-300 z-20 hover:-translate-y-1"
                     @click="nextGallery" aria-label="Next gallery item">
                     <i class="fa-solid fa-arrow-right text-sm"></i>
                 </button>
