@@ -28,7 +28,7 @@ const faculties = [
   { name: "Kulliyyah of Engineering", link: "https://drive.google.com/drive/folders/1mEzbwDa9v76l5D9Z6MaGm_r1mAMEKh9j", image: koe },
   { name: "Kulliyyah of Economics & Management Sciences", link: "https://drive.google.com/drive/folders/1pjF44cZOtPWnkTG_MH2rnf8t-8t9rOba", image: kenms },
   { name: "Kulliyyah of Information & Communication Technology", link: "https://drive.google.com/drive/folders/1kJK9YkGLGqvw-IRCQcYSM_3ZX79-KPkU", image: kict },
-  { name: "Centre for Languages & Pre-University Academic Development", link: "https://drive.google.com/drive/folders/1ncfujq_hIpRuhdiMbHZ1epozrPNRGf5y", image: celpad }
+  { name: "Centre for Languages & Pre-University Academic Development", link: "https://drive.google.com/drive/folders/1Q0ot1c0Ui7YdSrOMNqOHomAFnzWEYD1u", image: celpad }
 ];
 </script>
 
