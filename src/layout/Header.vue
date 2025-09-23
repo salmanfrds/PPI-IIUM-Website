@@ -61,11 +61,11 @@
         alt="PPIIIUM Logo" 
         class="h-12 xl:h-14 object-contain transition-transform duration-300 hover:scale-105"
       >
-      <img 
+      <!-- <img 
         src="../assets/merdeka.png" 
         alt="80 Tahun Merdeka" 
         class="h-12 xl:h-14 object-contain transition-transform duration-300 hover:scale-105 rounded-full"
-      >
+      > -->
     </router-link>
 
     <!-- Right-side Navigation (Desktop) -->
